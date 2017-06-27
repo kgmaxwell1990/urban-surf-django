@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'categories',
     'payments',
     'products',
+    'django_forms_bootstrap'
 ]
 
 MIDDLEWARE = [
