@@ -1,3 +1,91 @@
-a {
-    text-decoration: none;
+body {
+    /*background-color: rgba(146, 199, 226, 0.89);*/
 }
+
+h4 {
+    text-align: center;
+}
+
+hr {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.container {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-collapse {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image {
+ background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 350px;
+}
+
+.navbar-nav .logo {
+    opacity: 1;
+    vertical-align: middle;
+}
+
+.cards > img {
+    border: solid 1px;
+    height: 200px;
+    width: 200px;
+}
+
+.freedelivery {
+    background-color: rgba(146, 199, 226, 0.89);
+    margin: 0px;
+
+}
+
+.freedelivery:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(-45deg, transparent 75%, rgba(146, 199, 226, 0.89) 75%) 0 50%, linear-gradient(45deg, transparent 75%, rgba(146, 199, 226, 0.89) 75%) 0 50%;
+    background-size: 30px 30px;
+
+}
+
+.freedeliverytext {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.offer {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (min-width:768px) {
+    /*.navbar-nav .logo {
+        display:none;
+    }*/
+
+    .image {
+        margin: 30px;
+    }
+}
+
+
