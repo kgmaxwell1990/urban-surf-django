@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
     {% block head_js %}{% endblock %}
 </head>
 <body>
@@ -17,7 +18,7 @@
    <div class="masthead">
        <ul class="nav nav-pills pull-right">
             <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-cube"></i> Products</a></li>
+            <li><a href="{% url 'categories' %}"><i class="fa fa-cube"></i> Products</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
@@ -25,9 +26,9 @@
                 <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                 <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
             {% endif %}
-            <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
         </ul>
-       <a href="/"><h1><img src="{% static "images/fidget.png" %}" width="40px"/><span class="fui-settings-16 muted">TWO FOR A FIVER</span></h1></a>
+       <a href="/"><h1><img src="{% static "images/fidget.png" %}" width="40px"/><span class="fui-settings-16 muted">SURF'IN SHOP</span></h1></a>
    </div>
    <hr>
     {% if messages %}
