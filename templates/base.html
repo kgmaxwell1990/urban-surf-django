@@ -15,6 +15,7 @@
 </head>
 <body>
 <div class="container">
+    
    <div class="masthead">
        <ul class="nav nav-pills pull-right">
             <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
@@ -28,8 +29,9 @@
             {% endif %}
             <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
         </ul>
-       <a href="/"><h1><img src="{% static "images/fidget.png" %}" width="40px"/><span class="fui-settings-16 muted">SURF'IN SHOP</span></h1></a>
+       <a href="/"><h1><span class="fui-settings-16 muted">URBAN SURF</span></h1></a>
    </div>
+
    <hr>
     {% if messages %}
         <div class="alert alert-success">
