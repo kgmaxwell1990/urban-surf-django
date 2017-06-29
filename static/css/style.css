@@ -1,10 +1,4 @@
 body {
-/*background-color: rgba(146, 199, 226, 0.89);*/
-/*background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 rgba(146, 199, 226, 0.89);
-background-size:110px 480px;
-background-repeat:repeat-x;*/
 background-color: #008cbf;
 background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
 }
@@ -38,6 +32,19 @@ hr {
     text-align: center;
 }
 
+  .navbar-nav {
+      display: table;
+      float: none;
+      margin: 0 auto;
+      table-layout: fixed;
+      font-size: 1.25em;
+  }
+
+  .navbar-nav > li > a > img {
+      display: none;
+  }
+
+
 .image {
  background: no-repeat center center;
   background-attachment: scroll;
@@ -66,17 +73,6 @@ hr {
 
 }
 
-/*.freedelivery:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    background: linear-gradient(-45deg, transparent 75%, black 75%) 0 50%, linear-gradient(45deg, transparent 75%, black 75%) 0 50%;
-    background-size: 30px 30px;
-
-}*/
-
 .freedeliverytext {
     margin-top: 0px;
     margin-bottom: 1px;
@@ -90,18 +86,22 @@ hr {
 }
 
 @media screen and (min-width:768px) {
-    /*.navbar-nav .logo {
-        display:none;
-    }*/
+.image {
+    margin: 30px;
+    height: 400px;
+}
 
-    .image {
-        margin: 30px;
-        height: 400px;
-    }
+.navbar-collapse {
+    display: inherit;
+}
 
-    .navbar-collapse {
-        display: inherit;
-    }
+.navbar-nav > li > a > img {
+    display: inherit;
+}
+
+.navbar-header > a > img {
+    display: none;
+}
 }
 
 
