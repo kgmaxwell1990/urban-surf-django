@@ -23,6 +23,7 @@ from .settings import MEDIA_ROOT
 from cart import urls as cart_urls
 from payments import urls as payments_urls
 from categories import urls as categories_urls
+from blog import urls as blog_urls
 
 
 
@@ -31,6 +32,7 @@ urlpatterns = [
     url(r'^$', get_index, name='index'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^user/', include(accounts_urls)),
+    url(r'^blog/', include(blog_urls)),
     url(r'^products/', include(products_urls)),
     url(r'^categories/', include(categories_urls)),
     url(r'^payments/', include(payments_urls)),

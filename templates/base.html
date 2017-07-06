@@ -33,7 +33,7 @@
 
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <div>
+                <div class="nav-right">
                 <li id="logo"><a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="300px"/></a></li>
                 <li class="searchbox"><input type="text" name="search" placeholder="Search this Site"/><button>GO</button></li>
                 <li class="dropdown">
@@ -58,7 +58,7 @@
                     <li><a href="{% url 'products' %}">Browse All</a></li>
                 {% for category, subcategories in root_categories.items %}
                         <li class="dropdown" id="category.name">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ category.name}} <span class="caret"></span></a>
+                        <a href="{% url 'category' category.id %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ category.name}} <span class="caret"></span></a>
 
                         <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
                         {% for sub in subcategories %}
@@ -67,7 +67,7 @@
                         </ul>
                         </li>
                 {% endfor %}
-                    <li><a href="#"> Blog </li> 
+                    <li><a href="{% url 'blog' %}"> Blog </a></li> 
                 </div>
 
 
@@ -88,14 +88,15 @@
 
 
 
-                {% block content %}
-                {% endblock content%}
+    {% block content %}
+    {% endblock content %}
 
    <hr>
-   <div class="footer">
+
+   <footer>
        <p>Made By Bootcampers and Django </p>
-   </div>
-</div>
+   </footer>
+
 
     <script type="text/javascript" src="{% static "js/script.js" %}"></script>
 

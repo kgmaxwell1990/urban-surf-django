@@ -1,10 +1,4 @@
 body {
-/*background-color: rgba(146, 199, 226, 0.89);*/
-/*background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 rgba(146, 199, 226, 0.89);
-background-size:110px 480px;
-background-repeat:repeat-x;*/
 /*background-color: rgba(34, 128, 163, 0.6);*/
 background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
 }
@@ -14,7 +8,6 @@ h4 {
     text-align: center;
     color: black;
 }
-
 
 hr {
     text-align: center;
@@ -33,8 +26,24 @@ hr {
     padding: 0px;
 }
 
+.freedelivery {
+    background-color: rgba(34, 128, 163, 0.8);
+    margin: 0px;
+
+}
+
+.freedeliverytext {
+    margin-top: 0px;
+    padding-bottom: 2px;
+    margin-bottom: 1px;
+    color: beige;
+    font-size: 15px;
+    font-weight: 100px;
+}
+
+/* Navbar CSS*/
+
 .navbar-collapse {
-    /*margin-top: 10px;*/
     text-align: center;
 }
 
@@ -59,21 +68,6 @@ hr {
     color: black;
 }
 
-
-.image {
- background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  height: 250px;
-    -webkit-box-shadow:  1px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
-    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
-}
-
-
 .navbar-nav .logo {
     opacity: 1;
     vertical-align: middle;
@@ -85,34 +79,6 @@ hr {
 
 .navbar-toggle .icon-bar {
     background-color: black;
-}
-
-
-.cards > img {
-    border: solid 1px;
-    height: 200px;
-    width: 200px;
-}
-
-.freedelivery {
-    background-color: rgba(34, 128, 163, 0.8);
-    margin: 0px;
-
-}
-
-.freedeliverytext {
-    margin-top: 0px;
-    padding-bottom: 2px;
-    margin-bottom: 1px;
-    color: beige;
-    font-size: 15px;
-    font-weight: 100px;
-}
-
-.offer {
-    width: 100%;
-    background-color: black;
-    color: white;
 }
 
 .searchbox {
@@ -158,9 +124,60 @@ button {
     color: red;
 }
 
-#shopnowimages > div > img {
-    margin: 5px;
+/* End Navbar CSS */
+
+
+/* Home CSS */
+
+.image {
+ background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 250px;
+  margin-bottom: 0px;
+    -webkit-box-shadow:  1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
+}
+
+.backgroundvid {
     width: 100%;
+    height: 400px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#videoblock, #videocontent {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#videocontent *{
+    padding: 0.4em;
+    margin: 0;
+}
+
+#video {
+    width: 100%;
+    height: 400px;
+}
+
+.offer {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+.offer > h1 {
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }
 
 .brandlogos > ul > li {
@@ -169,9 +186,25 @@ button {
 }
 
 .brandlogos > ul > li > img {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+    /*filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);*/
 }
+
+#shopnowimages > div > img {
+    margin: 5px;
+    width: 100%;
+}
+
+.cards > img {
+    border: solid 1px;
+    height: 200px;
+    width: 200px;
+}
+
+/* End Home CSS */
+
+
+
 
 
 
@@ -212,6 +245,10 @@ hr {
     display: none;
 }
 
+.navright {
+    margin-left: 300px;
+}
+
 .navbar-nav > div > li {
     display: inline;
     margin: 10px;
@@ -233,6 +270,18 @@ hr {
 
 .offer {
     margin-bottom: 20px;
+}
+
+.backgroundvid {
+    height: 600px;
+}
+
+.brandlogos {
+    vertical-align: bottom;
+}
+
+#video {
+    height: 600px;
 }
 
 }
