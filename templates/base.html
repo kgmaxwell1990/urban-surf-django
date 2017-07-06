@@ -19,9 +19,8 @@
         <h4 class="freedeliverytext"> Free Delivery on all orders above €50 | <button class="fa fa-facebook" href="#"/>  <button class="fa fa-twitter" href="#"/>  <button class="fa fa-instagram" href="#"/>  <button class="fa fa-pinterest" href="#"/> </h4>
 
     </div>
-
-  <nav role="navigation">  
-   <div class="navbarcontainer">
+ 
+   <nav class="navbarcontainer" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -30,18 +29,6 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="150px"/></a></li>
-
-                <div class="menubuttons1">
-                  <ul>
-                    <li><a href="#"> Mens </li>  
-                    <li><a href="#"> Womens </li> 
-                    <li><a href="#"> Surf Gear </li> 
-                    <li><a href="#"> Footwear </li> 
-                    <li><a href="#"> Accessories </li> 
-                    <li><a href="#"> Sale </li> 
-                    <li><a href="#"> Blog </li> 
-                  </ul>
-                </div>
         </div>       
 
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
@@ -66,19 +53,28 @@
 
                 </div>  
                 <hr>
+
                 <div class="menubuttons2">
-                    <li><a href="#"> Mens </li>  
-                    <li><a href="#"> Womens </li> 
-                    <li><a href="#"> Surf Gear </li> 
-                    <li><a href="#"> Footwear </li> 
-                    <li><a href="#"> Accessories </li> 
-                    <li><a href="#"> Sale </li> 
+                    <li><a href="{% url 'products' %}">Browse All</a></li>
+                {% for category, subcategories in root_categories.items %}
+                        <li class="dropdown" id="category.name">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ category.name}} <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
+                        {% for sub in subcategories %}
+                            <li><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></li>                    
+                        {% endfor%}
+                        </ul>
+                        </li>
+                {% endfor %}
                     <li><a href="#"> Blog </li> 
                 </div>
+
+
             </ul>
         </div>
-   </div>
   </nav>
+
 
     {% if messages %}
         <div class="alert alert-success">
@@ -100,6 +96,9 @@
        <p>Made By Bootcampers and Django </p>
    </div>
 </div>
+
+    <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+
 </body>
 
 </html>

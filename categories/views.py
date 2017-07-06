@@ -30,4 +30,11 @@ def get_category(request, id):
 
 def root_categories_context(request):
     categories = Category.objects.filter(parent=None)
-    return {'root_categories': categories}
+
+    category_tree = {}
+
+    for category in categories:
+        sub_categories = Category.objects.filter(parent=category)
+        category_tree[category] = sub_categories
+
+    return {'root_categories': category_tree}
