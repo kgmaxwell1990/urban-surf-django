@@ -16,7 +16,8 @@
 <body>
 <div class="container">
     <div class="freedelivery">
-        <h4 class="freedeliverytext"> Free Delivery on all orders above €50</h4>
+        <h4 class="freedeliverytext"> Free Delivery on all orders above €50 | <button class="fa fa-facebook" href="#"/>  <button class="fa fa-twitter" href="#"/>  <button class="fa fa-instagram" href="#"/>  <button class="fa fa-pinterest" href="#"/> </h4>
+
     </div>
 
   <nav role="navigation">  
@@ -28,36 +29,56 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{% url 'index' %}"><img src="{% static 'images/logomaincopy.png' %}" width="150px"/></a>
+            <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="150px"/></a></li>
+
+                <div class="menubuttons1">
+                  <ul>
+                    <li><a href="#"> Mens </li>  
+                    <li><a href="#"> Womens </li> 
+                    <li><a href="#"> Surf Gear </li> 
+                    <li><a href="#"> Footwear </li> 
+                    <li><a href="#"> Accessories </li> 
+                    <li><a href="#"> Sale </li> 
+                    <li><a href="#"> Blog </li> 
+                  </ul>
+                </div>
         </div>       
 
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <div>
+                <li id="logo"><a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="300px"/></a></li>
+                <li class="searchbox"><input type="text" name="search" placeholder="Search this Site"/><button>GO</button></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                     <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
                 {%  else %}
-                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
+                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Sign Up</a></li>
                     <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
                 {% endif %}
-                <li class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/logomaincopy.png' %}"</a></li>
-                <li><a href="{% url 'categories' %}"><i class="fa fa-cube"></i> Products</a></li>
+                  </ul>
+                </li>
                 <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+                </div>  
+                <hr>
+                <div class="menubuttons2">
+                    <li><a href="#"> Mens </li>  
+                    <li><a href="#"> Womens </li> 
+                    <li><a href="#"> Surf Gear </li> 
+                    <li><a href="#"> Footwear </li> 
+                    <li><a href="#"> Accessories </li> 
+                    <li><a href="#"> Sale </li> 
+                    <li><a href="#"> Blog </li> 
+                </div>
             </ul>
         </div>
    </div>
   </nav>
-
-    <hr>
-
-   <div class="image" style="background-image: url('{% static 'images/beach.jpg'%}')">
-       <h2> Categories </h2>
-       <h4> Surfboards </h4>
-       <h4> Body Boards </h4>
-       <h4> Wetsuits </h4>
-       <h4> Accessories </h4>
-   </div>
-
 
     {% if messages %}
         <div class="alert alert-success">
@@ -71,20 +92,8 @@
 
 
 
-    <div class="row">
-       <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                {% block sidebar %}
-                {% endblock sidebar %}
-            </ul>
-        </div>
-        <div class="col-sm-10 col-sm-offset-1">
-            <div class="content">
                 {% block content %}
                 {% endblock content%}
-            </div>
-        </div>
-    </div>
 
    <hr>
    <div class="footer">

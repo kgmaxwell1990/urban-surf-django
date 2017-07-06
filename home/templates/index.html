@@ -1,32 +1,74 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
 
+   <div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')">
+   </div>
 
-
-<div class="col-sm-12">
-    <h1> Featured Products </h1>
-</div>
-
-<div class="col-sm-3 cards">
-    <img src="static/images/surfboard2.jpg"/>
-</div>
-
-<div class="col-sm-3 cards">
-    <img src="static/images/surfboard3.jpg"/>
-</div>
-
-<div class="col-sm-3 cards">
-    <img src="static/images/surfboard4.jpg"/>
-</div>
-
-<div class="col-sm-3 cards">
-    <img src="static/images/surfboard2.jpg"/>
-</div>
 
 <div class="col-sm-12 offer">
     <h1> Special Offer </br> 20% off all orders </h1>
 </div>
+
+<div class="col-sm-12 brandlogos">
+    <ul>
+        <li><img src="static/images/dc.png"/></li>
+        <li><img src="static/images/vans.png"/></li>
+        <li><img src="static/images/roxy.png"/></li>
+        <li><img src="static/images/osiris.png"/></li>
+        <li><img src="static/images/es.png"/></li>
+        <li><img src="static/images/vissla.png"/></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row shopnowimages">
+        <div class="col-sm-6">
+            <img src="static/images/menswear.jpg" width="300px"/>
+        </div>
+        <div class="col-sm-6">
+            <img src="static/images/womanswear.jpg" width="300px"/>
+        </div>
+        <div class="col-sm-4">
+            <img src="static/images/surfgear.jpg" width="300px"/>
+        </div>
+        <div class="col-sm-4">
+            <img src="static/images/accessories.jpg" width="300px"/>
+        </div>
+        <div class="col-sm-4">
+            <img src="static/images/footwear.jpg" width="300px"/>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1> Featured Products </h1>
+        </div>
+
+        <div class="col-sm-3 cards">
+            <img src="static/images/surfboard2.jpg"/>
+        </div>
+
+        <div class="col-sm-3 cards">
+            <img src="static/images/surfboard3.jpg"/>
+        </div>
+
+        <div class="col-sm-3 cards">
+            <img src="static/images/surfboard4.jpg"/>
+        </div>
+
+        <div class="col-sm-3 cards">
+            <img src="static/images/surfboard2.jpg"/>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 {% endblock content %}

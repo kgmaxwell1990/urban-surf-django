@@ -1,5 +1,11 @@
 body {
-background-color: #008cbf;
+/*background-color: rgba(146, 199, 226, 0.89);*/
+/*background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 rgba(146, 199, 226, 0.89);
+background-size:110px 480px;
+background-repeat:repeat-x;*/
+/*background-color: rgba(34, 128, 163, 0.6);*/
 background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
 }
 
@@ -28,21 +34,33 @@ hr {
 }
 
 .navbar-collapse {
-    margin-top: 30px;
+    /*margin-top: 10px;*/
     text-align: center;
 }
 
-  .navbar-nav {
-      display: table;
-      float: none;
-      margin: 0 auto;
-      table-layout: fixed;
-      font-size: 1.25em;
+.navbar-nav {
+    display: table;
+    float: none;
+    margin: 0 auto;
+    table-layout: fixed;
+    font-size: 1.25em;
+}
+
+.navbar-nav > div > li > a {
+      color: black;
   }
 
-  .navbar-nav > li > a > img {
-      display: none;
-  }
+.navbar-nav > div > li > a > img {
+    display: none;
+}
+
+.menubuttons1 {
+    display: none;
+}
+
+.menubuttons > li > a {
+    color: black;
+}
 
 
 .image {
@@ -52,7 +70,10 @@ hr {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  height: 350px;
+  height: 250px;
+    -webkit-box-shadow:  1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
 }
 
 
@@ -60,6 +81,15 @@ hr {
     opacity: 1;
     vertical-align: middle;
 }
+
+.navbar-header > a > img {
+    margin: 10px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: black;
+}
+
 
 .cards > img {
     border: solid 1px;
@@ -75,8 +105,11 @@ hr {
 
 .freedeliverytext {
     margin-top: 0px;
+    padding-bottom: 2px;
     margin-bottom: 1px;
     color: white;
+    font-size: 15px;
+    font-weight: 100px;
 }
 
 .offer {
@@ -85,22 +118,118 @@ hr {
     color: white;
 }
 
+.searchbox {
+    border:1px solid gray;
+    display:inline-block;
+    position:relative;
+    padding: 1.5px;
+    margin: 10px;
+}
+
+.searchbox > input,
+button {
+    background-color:transparent;
+    border:0;
+}
+
+.searchbox > button {
+    position:absolute;
+    right:0;
+    top:0;
+    background-color: gray;
+    color: black;
+}
+
+.searchbox > input {
+    padding-right:30px; /* button padding */
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+#shopnowimages > div > img {
+    margin: 5px;
+    width: 100%;
+}
+
+.brandlogos > ul > li {
+    display: inline;
+    margin: 20px;
+}
+
+.brandlogos > ul > li > img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
 @media screen and (min-width:768px) {
+
+hr {
+    margin-left: 80px;
+    margin-right: 80px;
+}    
+.freedeliverytext {
+    padding-bottom: 2px;
+    font-size: 20px;
+}
 .image {
     margin: 30px;
-    height: 400px;
+    max-height: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .navbar-collapse {
     display: inherit;
+    margin-top: 30px;
 }
 
-.navbar-nav > li > a > img {
+.navbar-nav {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.navbar-nav > div > li > a > img {
     display: inherit;
+    margin-bottom: 20px;
 }
 
 .navbar-header > a > img {
     display: none;
+}
+
+.navbar-nav > div > li {
+    display: inline;
+    margin: 10px;
+}
+
+.menubuttons1 {
+    display: none;
+}
+
+.searchbox {
+    padding: 4px;
+    margin-left: 50px;
+}
+
+#shopnowimages > div > img {
+    width: 100%;
+    margin: 5px;
+}
+
+.offer {
+    margin-bottom: 20px;
 }
 }
 
