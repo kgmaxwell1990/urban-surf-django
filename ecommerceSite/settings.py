@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'products',
     'django_forms_bootstrap',
     'blog',
+    'disqus',
+    'django.contrib.sites',
 
 ]
 

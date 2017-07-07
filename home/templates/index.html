@@ -3,26 +3,26 @@
 
 {% block content %}
 
-<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>
+{% comment %}<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>{% endcomment %}
 
-<div class="backgroundvid">
+<div id="backgroundvid">
     <div id="videoblock">
             <video loop muted autoplay poster="img/videoframe.jpg" id="video">
-                <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"></source>
+                <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"/>
             </video>
         <div id="videocontent">
-            <div class="col-sm-12 offer">
-                <h1> Special Offer - 20% off all Orders * </h1>
-            </div>
+            {% comment %}<div class="col-sm-12 offer">
+                <h1> Special Offer - 20% off all Orders </h1>
+            </div>{% endcomment %}
 
-            <div class="col-sm-12 brandlogos">
+            <div class="brandlogos">
                 <ul>
-                    <li><img src="static/images/dc.png"/></li>
-                    <li><img src="static/images/vans.png"/></li>
-                    <li><img src="static/images/roxy.png"/></li>
-                    <li><img src="static/images/osiris.png"/></li>
-                    <li><img src="static/images/es.png"/></li>
-                    <li><img src="static/images/vissla.png"/></li>
+                    <li><img class="brandlogo" src="static/images/dc.png"/></li>
+                    <li><img class="brandlogo" src="static/images/vans.png"/></li>
+                    <li><img class="brandlogo" src="static/images/roxy.png"/></li>
+                    <li><img class="brandlogo" src="static/images/osiris.png"/></li>
+                    <li><img class="brandlogo" src="static/images/es.png"/></li>
+                    <li><img class="brandlogo" src="static/images/vissla.png"/></li>
                 </ul>
             </div>
         </div>

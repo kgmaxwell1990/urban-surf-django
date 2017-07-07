@@ -143,7 +143,7 @@ button {
     box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
 }
 
-.backgroundvid {
+#backgroundvid {
     width: 100%;
     height: 400px;
     position: relative;
@@ -185,9 +185,9 @@ button {
     margin: 20px;
 }
 
-.brandlogos > ul > li > img {
-    /*filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);*/
+.brandlogo {
+    width: 50px;
+    bottom: 0;
 }
 
 #shopnowimages > div > img {
@@ -203,7 +203,17 @@ button {
 
 /* End Home CSS */
 
+/* Blog CSS */
+#blogpostsmain {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+}
 
+
+
+
+/* Blog CSS */
 
 
 
@@ -272,16 +282,42 @@ hr {
     margin-bottom: 20px;
 }
 
-.backgroundvid {
+#backgroundvid {
     height: 600px;
 }
 
-.brandlogos {
-    vertical-align: bottom;
+.brandlogo {
+    width: 120px;
 }
 
 #video {
     height: 600px;
+}
+
+#blogpostsmain {
+    margin: 50px;
+}
+
+#blogpostimagediv {
+    margin: 0;
+    display: inline;
+    padding: 0;
+}
+
+#blogpostinfodiv {
+    display: inline;
+}
+
+#blogpostimage {
+    margin: 0;
+    width: 100%;
+}
+
+#newpostbutton {
+    float: right;
+    margin-right: 50px;
+
+
 }
 
 }
