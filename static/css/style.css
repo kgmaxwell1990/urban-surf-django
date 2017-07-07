@@ -41,7 +41,28 @@ hr {
     font-weight: 100px;
 }
 
+.pushdown {
+    margin-top: 100px;
+}
+
 /* Navbar CSS*/
+
+nav {
+    background-color: white;
+    /*background-image: url('static/images/surfing.jpg');*/
+    /*padding-bottom: 10px;*/
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.navbar-fixed {
+    position: fixed;
+    display: inline-block;
+    z-index: 10;
+    width: 100%;
+}
 
 .navbar-collapse {
     text-align: center;
@@ -145,10 +166,13 @@ button {
 
 #backgroundvid {
     width: 100%;
-    height: 400px;
+    height: 250px;
+    display: inline-block;
     position: relative;
-    margin-top: 20px;
+    margin-top: 50px;
 }
+
+
 
 #videoblock, #videocontent {
     width: 100%;
@@ -165,7 +189,7 @@ button {
 
 #video {
     width: 100%;
-    height: 400px;
+    height: 200px;
 }
 
 .offer {
@@ -180,13 +204,24 @@ button {
     text-align: center;
 }
 
+.brandlogos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 60px;
+}
+
+.brandlogos > ul {
+    padding-left: 0;
+}
+
 .brandlogos > ul > li {
     display: inline;
-    margin: 20px;
+    margin: 10px;
 }
 
 .brandlogo {
-    width: 50px;
+    width: 30px;
     bottom: 0;
 }
 
@@ -208,9 +243,13 @@ button {
     background: white;
     padding: 20px;
     margin: 20px;
+    display: inline-block;
 }
 
-
+#newpostbutton {
+    float: right;
+    margin-right: 20px;
+}
 
 
 /* Blog CSS */
@@ -219,6 +258,14 @@ button {
 
 
 @media screen and (min-width:768px) {
+
+nav {
+    padding-bottom: 30px;
+}
+
+.pushdown {
+    margin-top: 240px;
+}
 
 hr {
     margin-left: 80px;
@@ -295,7 +342,7 @@ hr {
 }
 
 #blogpostsmain {
-    margin: 50px;
+    margin: 20px 200px;
 }
 
 #blogpostimagediv {
@@ -313,11 +360,10 @@ hr {
     width: 100%;
 }
 
-#newpostbutton {
-    float: right;
-    margin-right: 50px;
 
-
+.brandlogos {
+    left: 20%;
+    margin-bottom: 20px;
 }
 
 }
