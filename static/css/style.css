@@ -1,5 +1,5 @@
 body {
-/*background-color: rgba(34, 128, 163, 0.6);*/
+background-color: rgba(34, 128, 163, 0.6);
 background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
 }
 
@@ -48,7 +48,7 @@ hr {
 /* Navbar CSS*/
 
 nav {
-    background-color: white;
+    background-color: #f5f5f5;
     /*background-image: url('static/images/surfing.jpg');*/
     /*padding-bottom: 10px;*/
 }
@@ -150,7 +150,7 @@ button {
 
 /* Home CSS */
 
-.image {
+/*.image {
  background: no-repeat center center;
   background-attachment: scroll;
   -webkit-background-size: cover;
@@ -162,6 +162,25 @@ button {
     -webkit-box-shadow:  1px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
     box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
+}*/
+
+.featured {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.featured > h1 {
+    color: black;
+}
+
+.featured > li {
+    display: inline;
+}
+
+.featured > li > img {
+    border: 1px solid;
+    margin: 5px;
+
 }
 
 #backgroundvid {
@@ -170,9 +189,8 @@ button {
     display: inline-block;
     position: relative;
     margin-top: 50px;
+    text-align: center;
 }
-
-
 
 #videoblock, #videocontent {
     width: 100%;
@@ -192,20 +210,14 @@ button {
     height: 200px;
 }
 
-.offer {
-    width: 100%;
-    background-color: rgba(255, 0, 0, 0.7);
-    margin-top: 10px;
-}
-
-.offer > h1 {
-    color: black;
-    font-size: 20px;
-    text-align: center;
+#featuredblog {
+    background-color: white;
+    text-align: justify;
+    padding: 10px;
 }
 
 .brandlogos {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     margin-bottom: 60px;
@@ -225,22 +237,20 @@ button {
     bottom: 0;
 }
 
-#shopnowimages > div > img {
-    margin: 5px;
-    width: 100%;
+.cardclothes > img {
+    max-width: 300px;
 }
 
-.cards > img {
-    border: solid 1px;
-    height: 200px;
-    width: 200px;
+.card > img {
+    max-width: 300px;
 }
+
 
 /* End Home CSS */
 
 /* Blog CSS */
 #blogpostsmain {
-    background: white;
+    background: #f5f5f5;
     padding: 20px;
     margin: 20px;
     display: inline-block;
@@ -252,10 +262,10 @@ button {
 }
 
 
-/* Blog CSS */
+/* End Blog CSS */
 
 
-
+/* ------------------------------------------------------------------------------------ */
 
 @media screen and (min-width:768px) {
 
@@ -331,15 +341,26 @@ hr {
 
 #backgroundvid {
     height: 600px;
-}
 
-.brandlogo {
-    width: 120px;
 }
 
 #video {
     height: 600px;
 }
+
+.brandlogos {
+    margin: 0 auto;
+    bottom: 0;
+    position: relative;
+}
+
+.brandlogo {
+    width: 150px;
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+
 
 #blogpostsmain {
     margin: 20px 200px;
@@ -360,11 +381,14 @@ hr {
     width: 100%;
 }
 
-
-.brandlogos {
-    left: 20%;
-    margin-bottom: 20px;
+.cardclothes > img {
+    max-width: 600px;
 }
+
+.card > img {
+    max-width: 400px;
+}
+
 
 }
 

@@ -5,71 +5,80 @@
 
 {% comment %}<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>{% endcomment %}
 
-<div id="backgroundvid">
-
-            <video loop muted autoplay poster="img/videoframe.jpg" id="video">
-                <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"/>
-            </video>
-            {% comment %}<div class="col-sm-12 offer">
-                <h1> Special Offer - 20% off all Orders </h1>
-            </div>{% endcomment %}
-
-            <div class="brandlogos">
-                <ul>
-                    <li><img class="brandlogo" src="static/images/dc.png"/></li>
-                    <li><img class="brandlogo" src="static/images/vans.png"/></li>
-                    <li><img class="brandlogo" src="static/images/roxy.png"/></li>
-                    <li><img class="brandlogo" src="static/images/osiris.png"/></li>
-                    <li><img class="brandlogo" src="static/images/es.png"/></li>
-                    <li><img class="brandlogo" src="static/images/vissla.png"/></li>
-                </ul>
-        </div>
-    
-</div>
-
-<div class="container">
-    <div class="row shopnowimages">
-        <div class="col-sm-6">
-            <img src="static/images/menswear.jpg" width="300px"/>
-        </div>
-        <div class="col-sm-6">
-            <img src="static/images/womanswear.jpg" width="300px"/>
-        </div>
-        <div class="col-sm-4">
-            <img src="static/images/surfgear.jpg" width="300px"/>
-        </div>
-        <div class="col-sm-4">
-            <img src="static/images/accessories.jpg" width="300px"/>
-        </div>
-        <div class="col-sm-4">
-            <img src="static/images/footwear.jpg" width="300px"/>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-        <div class="col-sm-12">
+<div class="row">
+        
+    <div class="col-sm-3 featured">
             <h1> Featured Products </h1>
-        </div>
+            <li><img src="static/images/surfboard2.jpg" width="200px"/></li>
+            <li><img src="static/images/surfboard3.jpg" width="200px"/></li>
+            <li><img src="static/images/surfboard4.jpg" width="200px"/></li>
+            <li><img src="static/images/surfboard2.jpg" width="200px"/></li>
+    </div>
 
-        <div class="col-sm-3 cards">
-            <img src="static/images/surfboard2.jpg"/>
-        </div>
 
-        <div class="col-sm-3 cards">
-            <img src="static/images/surfboard3.jpg"/>
+    <div class="col-sm-6">
+        <div id="backgroundvid">
+            <video loop muted autoplay id="video">
+                <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"/>
+            </video>     
         </div>
+    </div>
 
-        <div class="col-sm-3 cards">
-            <img src="static/images/surfboard4.jpg"/>
-        </div>
-
-        <div class="col-sm-3 cards">
-            <img src="static/images/surfboard2.jpg"/>
+    <div class="col-sm-3 featured">
+        <h1> Latest from the Blog </h1>
+        <div id="featuredblog">
+            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
+            <hr>
+            <p> {% lorem 1 %}</p>
+            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
+            <hr>
+            <p> {% lorem 1 %}</p>
+            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
+            <hr>
+            <p> {% lorem 1 %}</p>
         </div>
     </div>
 </div>
+
+
+
+<div class="brandlogos">
+    <ul>
+        <li><img class="brandlogo" src="static/images/dc.png"/></li>
+        <li><img class="brandlogo" src="static/images/vans.png"/></li>
+        <li><img class="brandlogo" src="static/images/roxy.png"/></li>
+        <li><img class="brandlogo" src="static/images/osiris.png"/></li>
+        <li><img class="brandlogo" src="static/images/es.png"/></li>
+        <li><img class="brandlogo" src="static/images/vissla.png"/></li>
+    </ul>
+</div>
+    
+
+<div class="row">
+    <div class="col-sm-6 cardclothes">
+        <img src="static/images/menswear.jpg"/>
+    </div>
+    <div class="col-sm-6 cardclothes">
+        <img src="static/images/womanswear.jpg"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 card">
+        <img src="static/images/surfgear.jpg"/>
+    </div>
+    <div class="col-sm-4 card">
+        <img src="static/images/accessories.jpg" />
+    </div>
+    <div class="col-sm-4 card">
+        <img src="static/images/footwear.jpg" />
+    </div>
+</div>
+
+
+
+
+
 
 
 
