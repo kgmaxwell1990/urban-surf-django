@@ -3,18 +3,42 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Our Simple Site</title>
+    <title>Urban Surf</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     {% block head_js %}{% endblock %}
 </head>
 <body>
 <div class="container">
     <div class="freedelivery">
-        <h4 class="freedeliverytext"> Free Delivery on all orders above €50 | <button class="fa fa-facebook" href="#"/>  <button class="fa fa-twitter" href="#"/>  <button class="fa fa-instagram" href="#"/>  <button class="fa fa-pinterest" href="#"/> </h4>
+        <h4 class="freedeliverytext">Free Delivery on all orders €50 & over(<button type="button" 
+        data-toggle="modal" data-target="#myModal">T&C's * </button>)| <button class="fa fa-facebook" href="#" target="_blank"/>  
+        <button class="fa fa-twitter" href="#" target="_blank"/>  <button class="fa fa-instagram" href="#" target="_blank"/>  
+        <button class="fa fa-pinterest" href="#" target="_blank"/> 
+        </h4>
+
+    <!-- Modal for T&Cs -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Terms & Conditions for Free Delivery</h4>
+            </div>
+            <div class="modal-body">
+                <p>Total Order must be equal to or over €50 and Delivery Addres must be in Ireland</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+          </div>
+        </div>
 
     </div>
  
@@ -33,6 +57,8 @@
             <ul class="nav navbar-nav">
                 <div class="nav-right">
                 <li id="logo"><a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="300px"/></a></li>
+                <li class="searchbox"><input type="text" name="search" placeholder="Search Products"/><button>GO</button></li>
+
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
                   <span class="caret"></span></a>
@@ -47,11 +73,11 @@
                   </ul>
                 </li>
                 <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-
                 </div>  
-                <hr>
 
-                <div class="menubuttons2">
+                <hr id="navbarline">
+
+                <div class="menubuttons">
                     <li><a href="{% url 'products' %}">Browse All</a></li>
                 {% for category, subcategories in root_categories.items %}
                         <li class="dropdown" id="category.name">
@@ -65,7 +91,6 @@
                         </li>
                 {% endfor %}
                     <li><a href="{% url 'blog' %}"> Blog </a></li> 
-                    <li class="searchbox"><input type="text" name="search" placeholder="Search Products"/><button>GO</button></li>
 
                 </div>
 

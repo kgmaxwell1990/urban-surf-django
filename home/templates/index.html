@@ -6,35 +6,42 @@
 {% comment %}<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>{% endcomment %}
 
 <div class="row">
+    <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
         
     <div class="col-sm-3 featured">
             <h1> Featured Products </h1>
+        <div class="scrollinrollinrollin">
             <li><a href="#"><img src="static/images/surfboard2.jpg" width="200px"/></a></li>
             <li><a href="#"><img src="static/images/surfboard3.jpg" width="200px"/></a></li>
-            <li><a href="#"><img src="static/images/surfboard4.jpg" width="200px"/></a></li>
-            <li><a href="#"><img src="static/images/surfboard2.jpg" width="200px"/></a></li>
+            {% comment %}<li><a href="#"><img src="static/images/surfboard4.jpg" width="200px"/></a></li>
+            <li><a href="#"><img src="static/images/surfboard2.jpg" width="200px"/></a></li>{% endcomment %}
+        </div>
     </div>
 
 
     <div class="col-sm-6">
-        <div id="backgroundvid">
+
+        <img id="mainimage" src="static/images/title2.png" width="300px"/>
+        {% comment %}<div id="backgroundvid">
             <video loop muted autoplay id="video">
                 <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"/>
             </video>     
+        </div>{% endcomment %}
+
+        <hr>
+        <hr>
+        <div class="enteremail">
+        <h4> Enter your email to sign up for daily updates on surf conditions and special offers </h4>
+        <input type="text" name="subscribe" placeholder="Enter your email"><button>Submit</button></input>
         </div>
     </div>
 
     <div class="col-sm-3 featured">
         <h1> Latest from the Blog </h1>
         <div id="featuredblog">
-            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
+            <h5> TRAVEL BACK TO A COLORIZED '60S'</h5>
             <hr>
-            <p> {% lorem 1 %}</p>
-            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
-            <hr>
-            <p> {% lorem 1 %}</p>
-            <h4> TRAVEL BACK TO A COLORIZED '60S'</h4>
-            <hr>
+
             <p> {% lorem 1 %}</p>
         </div>
     </div>
