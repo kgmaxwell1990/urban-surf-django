@@ -8,25 +8,18 @@
 <div class="row">
     <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
         
-    <div class="col-sm-3 featured">
+    {% comment %}<div class="col-sm-3 featured">
             <h1> Featured Products </h1>
         <div class="scrollinrollinrollin">
-            <li><a href="#"><img src="static/images/surfboard2.jpg" width="200px"/></a></li>
-            <li><a href="#"><img src="static/images/surfboard3.jpg" width="200px"/></a></li>
-            {% comment %}<li><a href="#"><img src="static/images/surfboard4.jpg" width="200px"/></a></li>
-            <li><a href="#"><img src="static/images/surfboard2.jpg" width="200px"/></a></li>{% endcomment %}
+            <li><a href="#"><img src="static/images/womenstop1.jpg" width="200px"/></a></li>
+            <li><a href="#"><img src="static/images/womensdresses2.jpg" width="200px"/></a></li>
         </div>
-    </div>
+    </div>{% endcomment %}
 
 
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-sm-offset-3 ">
 
         <img id="mainimage" src="static/images/title2.png" width="300px"/>
-        {% comment %}<div id="backgroundvid">
-            <video loop muted autoplay id="video">
-                <source src="{% static "vid/surfer.mp4" %}" type="video/mp4"/>
-            </video>     
-        </div>{% endcomment %}
 
         <hr>
         <hr>
@@ -36,20 +29,10 @@
         </div>
     </div>
 
-    <div class="col-sm-3 featured">
-        <h1> Latest from the Blog </h1>
-        <div id="featuredblog">
-            <h5> TRAVEL BACK TO A COLORIZED '60S'</h5>
-            <hr>
-
-            <p> {% lorem 1 %}</p>
-        </div>
-    </div>
-</div>
 
 
 
-<div class="brandlogos">
+<div class="col-sm-12 brandlogos">
     <ul>
         <li><img class="brandlogo" src="static/images/dc.png"/></li>
         <li><img class="brandlogo" src="static/images/vans.png"/></li>
@@ -59,26 +42,63 @@
         <li><img class="brandlogo" src="static/images/vissla.png"/></li>
     </ul>
 </div>
-    
 
-<div class="row">
-    <div class="col-sm-6 cardclothes">
-        <img src="static/images/menswear.jpg"/>
-    </div>
-    <div class="col-sm-6 cardclothes">
-        <img src="static/images/womanswear.jpg"/>
+
+<div class="row" id="subscribetomagazine">
+    <div class="col-sm-6">
+        <img src="static/images/surfermagazine.jpg" alt="magazine" width="50%"/>
+        <h4> Subscribe to Urban Surfs monthly magazine </br>
+        <button type="submit"> Subscribe</button></h4>
+    </div>   
+    <div class="col-sm-6">
+            <h4> Latest from the Blog </h4>
+            <hr>
+            <h5> TRAVEL BACK TO A COLORIZED '60S'</h5>
+            <hr>
+            <div class="bloginfo">
+                <p> Feels like we’ve pretty much strip-mined the veins of classic surf photo gold from the golden days of the ’60s, but then along comes TIME magazine to splash some color ...</p>
+            </div>
+            <hr>
+            <h5> OUR 2017 RIO PRO PREDICTIONS</h5>
+            <hr>
+            <div class="bloginfo">
+                <p> We’re officially out of Oz for the fourth event of the 2017 ‘CT. The Oi Rio Pro, previously held in Rio de Janeiro, has now moved to Saquarema, a small ...</p>
+            </div>
+            <hr>
+            <h5> TIPS FROM THE LEADERBOARD</h5>
+            <hr>
+            <div class="bloginfo">
+                <p> For years here on Surfer.com and FantasySurfer.com, we’ve given you columns from the pros, our staff picks, pages of valuable statistics, and event previews that give you every latest detail ...</p>
+            </div>
+        </div>
     </div>
 </div>
+    
+<div class="containercards align-middle">
+    <div class="row">
+        <div class="col-sm-6 cardclothes">
+            <img src="static/images/menswear.jpg"/>
+            <button type="submit" class="btn btn-lg buttoncard"> Shop Men </button>
+        </div>
+        <div class="col-sm-6 cardclothes">
+            <img src="static/images/womanswear.jpg"/>
+            <button type="submit" class="btn btn-lg buttoncard"> Shop Women </button>
+        </div>
+    </div>
 
-<div class="row">
-    <div class="col-sm-4 card">
-        <img src="static/images/surfgear.jpg"/>
-    </div>
-    <div class="col-sm-4 card">
-        <img src="static/images/accessories.jpg" />
-    </div>
-    <div class="col-sm-4 card">
-        <img src="static/images/footwear.jpg" />
+    <div class="row">
+        <div class="col-sm-4 card">
+            <img src="static/images/surfgear.jpg"/>
+            <button type="submit" class="btn btn-lg buttoncard"> Shop Surf Gear </button>
+        </div>
+        <div class="col-sm-4 card">
+            <img src="static/images/accessories.jpg" />
+            <button type="submit" class="btn btn-lg buttoncard"> Shop Accessories </button>
+        </div>
+        <div class="col-sm-4 card">
+            <img src="static/images/footwear.jpg" />
+            <button type="submit" class="btn btn-lg buttoncard"> Shop Footwear </button>
+        </div>
     </div>
 </div>
 

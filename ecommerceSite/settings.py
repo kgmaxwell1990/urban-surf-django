@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'blog',
     'disqus',
     'django.contrib.sites',
+    'search',
 
 ]
 

@@ -24,6 +24,8 @@ from cart import urls as cart_urls
 from payments import urls as payments_urls
 from categories import urls as categories_urls
 from blog import urls as blog_urls
+from search import urls as search_urls
+from search.views import do_search
 
 
 
@@ -37,5 +39,6 @@ urlpatterns = [
     url(r'^categories/', include(categories_urls)),
     url(r'^payments/', include(payments_urls)),
     url(r'^cart/', include(cart_urls)),
+    url(r'^search/', do_search, name='search'),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]

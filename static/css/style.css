@@ -165,20 +165,6 @@ button {
 
 /* Home CSS */
 
-/*.image {
- background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  height: 250px;
-  margin-bottom: 0px;
-    -webkit-box-shadow:  1px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
-    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
-}*/
-
 .featured {
     text-align: center;
     max-height: 500px;
@@ -189,19 +175,28 @@ button {
     font-family: 'Oswald', sans-serif;
 }
 
-.featured > li {
+.scrollinrollinrollin > li {
     display: inline;
 }
 
-.featured > li > img {
+.scrollinrollinrollin > li > a > img {
     border: 1px solid;
     margin: 5px;
+}
 
+.featuredheading {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    font-family: Oswald, cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
 }
 
 #mainimage {
     width: 100%;
-    vertical-align: centre;
+    margin-top: 10%;
 }
 
 .enteremail {
@@ -213,35 +208,6 @@ button {
     display: none;
 }
 
-#backgroundvid {
-    width: 100%;
-    height: 250px;
-    display: inline-block;
-    position: relative;
-    margin-top: 50px;
-    text-align: center;
-}
-
-
-
-#videoblock, #videocontent {
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#videocontent *{
-    padding: 0.4em;
-    margin: 0;
-}
-
-#video {
-    width: 100%;
-    height: 200px;
-}
-
 #featuredblog {
     background-color: white;
     text-align: justify;
@@ -249,7 +215,9 @@ button {
 }
 
 .brandlogos {
-    z-index: 100;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
 }
 
 .brandlogos > ul {
@@ -266,14 +234,47 @@ button {
     bottom: 0;
 }
 
+#subscribetomagazine {
+    text-align: center;
+    padding: 10px;
+}
+
+.bloginfo {
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .cardclothes > img {
     max-width: 300px;
+    margin: 10px;
+    position: relative;
 }
 
 .card > img {
     max-width: 300px;
+    margin: 10px;
+    position: relative;
 }
 
+.containercards {
+    text-align: center;
+}
+
+.buttoncard {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: Oswald, cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+}
 
 /* End Home CSS */
 
@@ -362,7 +363,11 @@ hr {
 
 .searchbox {
     padding: 4px;
-    margin-left: 50px;
+
+}
+
+.searchbox > form {
+    display: inline;
 }
 
 .menubuttons > li > a {
@@ -386,7 +391,6 @@ hr {
 
 #backgroundvid {
     height: 600px;
-
 }
 
 #video {
@@ -395,10 +399,14 @@ hr {
 
 .brandlogos {
     margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    text-align: center;
 }
 
 .brandlogo {
-    width: 150px;
+    width: 120px;
+    margin-top: 200px;
     margin: 20px;
     margin-bottom: 0;
 }
@@ -426,6 +434,10 @@ hr {
 #blogpostimage {
     margin: 0;
     width: 100%;
+}
+
+#subscribetomagazine {
+    text-align: center;
 }
 
 .cardclothes > img {
