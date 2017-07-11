@@ -84,11 +84,12 @@
 
                 <div class="menubuttons">
                     <li><a href="{% url 'products' %}">Browse All</a></li>
+
                 {% for category, subcategories in root_categories.items %}
                         <li class="dropdown" id="category.name">
                         <a href="{% url 'category' category.id %}" class="dropdown-toggle" 
                         data-toggle="dropdown" role="button" aria-haspopup="true" 
-                        aria-expanded="false">{{ category.name }} <span class="caret"></span></a>
+                        aria-expanded="false"> {{ category.name }} <span class="caret"></span></a>
 
                         <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
                         {% for sub in subcategories %}
@@ -124,10 +125,71 @@
     {% endblock content %}
 </div>
 
-   <hr>
 
-   <footer>
-       <p>Made By Bootcampers and Django </p>
+   <footer id="footer">
+        <div class="row">
+            <div class="col-sm-4 footericons">
+                <li><img src="static/images/footershippingicon.png"></li>
+                <li><h4> FREE SHIPPING </br> Free Shipping in Ireland on all orders over €50!</h4></li>
+            </div>      
+            <div class="col-sm-4 footericons">
+                <li><img src="static/images/footergifticon.png"></li>
+                <li><h4> GIFT VOUCHERS </br> The perfect gift for the surfer in your life!</h4></li>
+            </div>    
+            <div class="col-sm-4 footericons">
+                <li><img src="static/images/footeririshicon.png"></li>
+                <li><h4> 100% IRISH OWNED </br> We are an Irish surf brand ran by Irish surfers!</h4></li>
+            </div>     
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-3 footerinfo">
+                <h4>HOW WE CAN HELP</h4>
+                <h5><a href="#"> Free Delivery </a></h5>
+                <h5><a href="#"> Easy Returns </a></h5>
+                <h5><a href="#"> Customer Discount </a></h5>
+                <h5><a href="#"> Flexi-Pay </a></h5>
+                <h5><a href="#"> About Us </a></h5>
+            </div>
+            <div class="col-sm-3 footerinfo">
+                <h4> NEWSLETTER </h4>
+                <p>Enter your email to sign up to daily newsletter for updates on surf conditions and special offers</p>
+                <input type="text" name="subscribe" placeholder="Enter your email">
+                <button>Submit</button></input>
+
+            </div>
+            <div class="col-sm-3 footerinfo">
+                <h4> CONTACT US </h4>
+                <form method="POST" enctype="multipart/form-data">
+                <input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken"/>
+                <fieldset>
+                <p><label for="name">Name</label>
+                <input id="name" type="text" name="name"/></p>
+                <p><label for="email">Email</label>
+                <input id="email" type="text" name="email"/></p>
+                <p><label for="enquiry">Enquiry</label>
+                <input id="enquiry" type="text" name="enquiry"/></p>
+
+
+                <input type="submit"/>
+    </fieldset>
+</form>
+            </div>
+            <div class="col-sm-3 footerinfo">
+                <h4> FOLLOW US </h4>
+                    <button class="fa fa-facebook" href="#" target="_blank"/>  
+                    <button class="fa fa-twitter" href="#" target="_blank"/>  
+                    <button class="fa fa-instagram" href="#" target="_blank"/>  
+                    <button class="fa fa-pinterest" href="#" target="_blank"/> 
+                
+            </div>
+        </div>
+
+
+
+
    </footer>
 
 
