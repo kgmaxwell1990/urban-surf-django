@@ -4,7 +4,7 @@ from payments.forms import MakePaymentForm
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.template.context_processors import csrf
 from django.conf import settings
-from products.models import Product
+from products.models import Products
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET
@@ -13,10 +13,11 @@ stripe.api_key = settings.STRIPE_SECRET
 @login_required(login_url="/accounts/login")
 def buy_now(request, id):
     if request.method == 'POST':
+        print(request.POST)
         form = MakePaymentForm(request.POST)
         if form.is_valid():
             try:
-                product = get_object_or_404(Product, pk=id)
+                product = get_object_or_404(Products, pk=id)
                 customer = stripe.Charge.create(
                     amount= int(product.price * 100),
                     currency="EUR",
@@ -36,7 +37,7 @@ def buy_now(request, id):
 
     else:
         form = MakePaymentForm()
-        product = get_object_or_404(Product, pk=id)
+        product = get_object_or_404(Products, pk=id)
 
     args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE, 'product': product}
     args.update(csrf(request))

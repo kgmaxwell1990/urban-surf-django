@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category
-from products.models import Product
+from products.models import Products
 
 # Create your views here.
 def root_categories(request):

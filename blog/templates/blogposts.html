@@ -9,12 +9,12 @@
         <div class="row" id="blogpostsmain">
 
             <div class="col-sm-4" id="blogpostimagediv">
-                <a class="story-img" href="{{ post.id }}">
+                <a class="story-img" href="{{ post.id }}" >
                         <img id="blogpostimage" src="{{MEDIA_URL}}{{ post.image}}" width="150px">
                 </a>
             </div>
             <div class="col-sm-8" id="blogpostinfodiv">
-                <a href="{{ post.id }}>"><h3>{{ post.title }}</h3></a>
+                <a href="{{ post.id }}"><h3>{{ post.title }}</h3></a>
                 <div class="row">
                     <div class="col-xs-9">
                         <p>{{ post.content|truncatewords:30 }}</p>

@@ -143,6 +143,10 @@ button {
     padding-right:30px; /* button padding */
 }
 
+.searchbox > form {
+    border: none;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: black;
 }

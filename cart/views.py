@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 
 from .models import CartItem
 from django.contrib.auth.decorators import login_required
-from products.models import Product
+from products.models import Products
 from payments.forms import MakePaymentForm
 from django.template.context_processors import csrf
 from django.contrib import messages
@@ -63,7 +63,7 @@ def user_cart(request):
 
 @login_required(login_url="/accounts/login")
 def add_to_cart(request, id):
-    product = get_object_or_404(Product, pk=id)
+    product = get_object_or_404(Products, pk=id)
     quantity=int(request.POST.get('quantity'))
 
     try:
