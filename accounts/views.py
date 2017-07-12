@@ -87,7 +87,7 @@ def subscribe(request):
                 customer = stripe.Customer.create(
                     email=request.user.email,
                     card=form.cleaned_data['stripe_id'],
-                    plan='REG_MONTHLY',
+                    plan='MONTHLY_PLAN',
                 )
 
                 if customer:

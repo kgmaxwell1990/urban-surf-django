@@ -14,7 +14,8 @@
 {% block content %}
     <h2>Success!</h2>
     <p>You are logged in as {{ user.email }} </p>
-<p>Your stripe id is {{ user.profile.stripe_id }} </p>
+<!--<p>Your stripe id is {{ user.profile.stripe_id }} </p>-->
+    
     <h2>Subscription Details</h2>
 
     {% if user.profile.subscription_active %}

@@ -7,15 +7,24 @@
 
 <div class="row">
     <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
-
+    <img id="mobileimage" src="static/images/surfmobile.jpg" width="300px"/>
 
     <div class="col-sm-6 col-sm-offset-3">
         <img id="mainimage" src="static/images/title2.png" width="300px"/>
-        <hr>
-        <hr>
+        <hr class="line1">
+        <hr class="line1">
         <div class="enteremail">
-        <h4> Enter your email to sign up to daily newsletter for updates on surf conditions and special offers </h4>
-        <input type="text" name="subscribe" placeholder="Enter your email"><button>Submit</button></input>
+            <h4> Enter your email to sign up to daily newsletter for updates on surf conditions and special offers </h4>
+
+            <form class="navbar-form emailform" role="collectemail">
+                    <div class="input-group add-on">
+                        <input class="form-control" id="srch-term" type="text" name="subscribe" 
+                        placeholder="Enter your email"/>
+                            <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Submit</button>
+                            </div>
+                    </div>
+            </form>
         </div>
     </div>
 

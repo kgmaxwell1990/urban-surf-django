@@ -81,19 +81,19 @@
                             </li>
                             
                             <li class="dropdown">
-                            <a class="dropdown-toggle color_black" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
+                            <a class="dropdown-toggle color_black oswald" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                             {% if user.is_authenticated %}
-                                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                                <li><a href="{% url 'profile' %}" class="oswald"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="{% url 'logout' %}" class="oswald"><i class="fa fa-sign-out"></i> Log Out</a></li>
                             {%  else %}
-                                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Sign Up</a></li>
-                                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                                <li><a href="{% url 'register' %}" class="oswald"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+                                <li><a href="{% url 'login' %}" class="oswald"><i class="fa fa-sign-in"></i> Log In</a></li>
                             {% endif %}
                             </ul>
                             </li>
-                            <li><a href="{% url 'cart' %}" class="color_black"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a href="{% url 'cart' %}" class="color_black oswald"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                         </div>  
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     {% endfor %}
 
 
-                        <li><a href="{% url 'blog' %}" class="color_black"> BLOG </a></li> 
+                        <li><a href="{% url 'blog' %}" class="color_black"> Blog </a></li> 
                     </ul>
                 </div>
                 <hr class="navbarline">
@@ -131,23 +131,23 @@
 
 
 
-<div class="pushdown">
-    {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
+    <div class="pushdown">
+        {% if messages %}
+            <div class="alert alert-success">
+                <div class="messages">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    {% endif %}
-</div>
+        {% endif %}
+    </div>
 
 
-<div class="pushdown">
-    {% block content %}
-    {% endblock content %}
-</div>
+    <div class="pushdown">
+        {% block content %}
+        {% endblock content %}
+    </div>
 
 
    <footer id="footer">
@@ -173,48 +173,44 @@
                 <h4>HOW WE CAN HELP</h4>
                 <h5><a href="#"> Free Delivery </a></h5>
                 <h5><a href="#"> Easy Returns </a></h5>
-                <h5><a href="#"> Customer Discount </a></h5>
-                <h5><a href="#"> Flexi-Pay </a></h5>
+                <h5><a href="#"> FAQs </a></h5>
                 <h5><a href="#"> About Us </a></h5>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> NEWSLETTER </h4>
                 <p>Enter your email to sign up to daily newsletter for updates on surf conditions and special offers</p>
                 <input type="text" name="subscribe" placeholder="Enter your email">
-                <button>Submit</button></input>
-
+                <button>Submit</button>/>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> CONTACT US </h4>
                 <form method="POST" enctype="multipart/form-data">
-                <input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken"/>
-                <fieldset>
-                <p><label for="name">Name</label>
-                <input id="name" type="text" name="name"/></p>
-                <p><label for="email">Email</label>
-                <input id="email" type="text" name="email"/></p>
-                <p><label for="enquiry">Enquiry</label>
-                <input id="enquiry" type="text" name="enquiry"/></p>
+                    <input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken"/>
+                    <fieldset>
+                        <p><label for="name">Name</label>
+                        <input id="name" type="text" name="name"/></p>
+                        <p><label for="email">Email</label>
+                        <input id="email" type="text" name="email"/></p>
+                        <p><label for="enquiry">Enquiry</label>
+                        <input id="enquiry" type="text" name="enquiry"/></p>
 
 
-                <input type="submit"/>
-    </fieldset>
-</form>
+                        <input type="submit"/>
+                    </fieldset>
+                </form>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> FOLLOW US </h4>
-                    <button class="fa fa-facebook" href="#" target="_blank"/>  
-                    <button class="fa fa-twitter" href="#" target="_blank"/>  
-                    <button class="fa fa-instagram" href="#" target="_blank"/>  
-                    <button class="fa fa-pinterest" href="#" target="_blank"/> 
+                    <button class="fa fa-facebook" href="#" target="_blank"></button>  
+                    <button class="fa fa-twitter" href="#" target="_blank"></button>   
+                    <button class="fa fa-instagram" href="#" target="_blank"></button>   
+                    <button class="fa fa-pinterest" href="#" target="_blank"></button> 
                 
             </div>
         </div>
+    </footer>
 
-
-
-
-   </footer>
+</div>
 
 
 
