@@ -43,3 +43,14 @@ class UserRegistrationForm(UserCreationForm):
             instance.save()
 
         return instance
+
+class SubscribeForm(forms.Form):
+
+    MONTHLY_PLAN = [(i, i,) for i in range(1, 12)]
+    YEARLY_PLAN = [(i, i,) for i in range(2015, 2036)]
+
+    credit_card_number = forms.CharField(label='Credit card number')
+    cvv = forms.CharField(label='Security code (CVV)')
+    expiry_month = forms.ChoiceField(label="Month", choices=MONTHLY_PLAN)
+    expiry_year = forms.ChoiceField(label="Year", choices=YEARLY_PLAN)
+    stripe_id = forms.CharField(widget=forms.HiddenInput)

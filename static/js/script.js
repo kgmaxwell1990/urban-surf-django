@@ -6,11 +6,16 @@ $(document).ready(function () {
     // });
 
 
-    $('.scrollinrollinrollin').scrollbox({
-        direction: 'v',
-        linear: true,
-        step: 1,
-        delay: 0,
-        speed: 100
-    });
+    // $('.scrollinrollinrollin').scrollbox({
+    //     direction: 'v',
+    //     linear: true,
+    //     step: 1,
+    //     delay: 0,
+    //     speed: 100
+    // });
+    
+});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
 });

@@ -8,12 +8,14 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     {% block head_js %}{% endblock %}
 </head>
 <body>
+
 <div class="container">
     <div class="freedelivery">
         <h4 class="freedeliverytext">Free Delivery on all orders €50 & over(<button type="button" 
@@ -40,10 +42,11 @@
             </div>
           </div>
         </div>
-
     </div>
  
-   <nav class="navbarcontainer navbar-fixed" role="navigation">
+
+
+   <nav class="navbar-fixed" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -51,61 +54,81 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="150px"/></a></li>
+            <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="150px" id="mobilelogo"/></a>
         </div>       
 
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <div>
-                <li id="logo"><a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" 
-                width="300px"/></a></li>
+            <div class="nav navbar-nav">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" id="bigscreenlogo"
+                        width="300px"/></a>
+                    </div>
 
-                <li class="searchbox"><form method="GET" action="{% url 'search' %}">
-                    <input type="text" name="q" placeholder="Search Products"/>
-                    <button type="submit">Go</button></form></li>
-                
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                {%  else %}
-                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Sign Up</a></li>
-                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
-                {% endif %}
-                  </ul>
-                </li>
-                <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                </div>  
+                    <div class="col-md-6">
+                        <div class="hello">
+                            
+                            <li>
+                                <div class="searchbox">
+                                <form method="GET" action="{% url 'search' %}" class="navbar-search">
+                                <span class="icon"><i class="fa fa-search"></i></span>
+                                <input type="search" name="q" placeholder="Search Products..."/>
+                                <button type="submit">Go</button>
+                                </form>
+                                </div>
+                            </li>
+                            
+                            <li class="dropdown">
+                            <a class="dropdown-toggle color_black" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                            {%  else %}
+                                <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+                                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                            {% endif %}
+                            </ul>
+                            </li>
+                            <li><a href="{% url 'cart' %}" class="color_black"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                        </div>  
+                    </div>
+                </div>
 
                 <hr id="navbarline">
 
-                <div class="menubuttons">
-                    <li><a href="{% url 'products' %}">Browse All</a></li>
 
-                {% for category, subcategories in root_categories.items %}
-                        <li class="dropdown" id="category.name">
-                        <a href="{% url 'category' category.id %}" class="dropdown-toggle" 
-                        data-toggle="dropdown" role="button" aria-haspopup="true" 
-                        aria-expanded="false"> {{ category.name }} <span class="caret"></span></a>
+              
+                    <div class="nav navbar-nav">
+                        <ul class="menubuttons">
+                            <li><a href="{% url 'products' %}" class="color_black">Browse All</a></li>
 
-                        <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
-                        {% for sub in subcategories %}
-                            <li><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></li>                    
-                        {% endfor%}
+                        {% for category, subcategories in root_categories.items %}
+                                <li class="dropdown" id="category.name">
+                                <a href="{% url 'category' category.id %}" 
+                                class="dropdown-toggle {% if category.name == 'Sale' %} color_red {% else %} color_black {% endif %}" 
+                                role="button" aria-haspopup="true" 
+                                aria-expanded="false"> {{ category.name }} <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
+                                {% for sub in subcategories %}
+                                    <li><a href="{% url 'category' sub.id %}">{{ sub.name }}</a></li>                    
+                                {% endfor%}
+                                </ul>
+                                </li>
+                        {% endfor %}
+
+
+                            <li><a href="{% url 'blog' %}"> Blog </a></li> 
                         </ul>
-                        </li>
-                {% endfor %}
-                    <li><a href="{% url 'blog' %}"> Blog </a></li> 
+                    </div>
+                
 
-                </div>
-
-
-            </ul>
         </div>
   </nav>
+
+
 
 <div class="pushdown">
     {% if messages %}
@@ -129,15 +152,15 @@
    <footer id="footer">
         <div class="row">
             <div class="col-sm-4 footericons">
-                <li><img src="static/images/footershippingicon.png"></li>
+                <li><img src="{% static 'images/footershippingicon.png' %}"></li>
                 <li><h4> FREE SHIPPING </br> Free Shipping in Ireland on all orders over €50!</h4></li>
             </div>      
             <div class="col-sm-4 footericons">
-                <li><img src="static/images/footergifticon.png"></li>
+                <li><img src="{% static 'images/footergifticon.png' %}"></li>
                 <li><h4> GIFT VOUCHERS </br> The perfect gift for the surfer in your life!</h4></li>
             </div>    
             <div class="col-sm-4 footericons">
-                <li><img src="static/images/footeririshicon.png"></li>
+                <li><img src="{% static 'images/footeririshicon.png' %}"></li>
                 <li><h4> 100% IRISH OWNED </br> We are an Irish surf brand ran by Irish surfers!</h4></li>
             </div>     
         </div>
@@ -191,6 +214,7 @@
 
 
    </footer>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>

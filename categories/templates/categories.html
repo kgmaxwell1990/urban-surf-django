@@ -52,4 +52,40 @@
         {% endfor %}
         </tbody>
     </table>
+
+   <!--{% for product in Products %}
+   <div class="row">
+        <div class="col-sm-3">
+            <article class="col-item">
+            	<div class="photo">
+        			<div class="options-cart-round">
+        				<button class="btn btn-default" title="Add to cart">
+        					<span class="fa fa-shopping-cart"></span>
+        				</button>
+        			</div>
+        			<a href="#"> <img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image" /> </a>
+        		</div>
+        		<div class="info">
+        			<div class="row">
+        				<div class="price-details col-md-6">
+        					<p class="details">
+        						Lorem ipsum dolor sit amet, consectetur..
+        					</p>
+        					<h1>{{ product.name }}</h1>
+        					<span class="price-new">{{ product.price }}</span>
+                            <a href="{% url 'buy_now_stripe' product.id %}" )>Buy Now</a>
+        				</div>
+                            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            Quantity
+                            <input name='quantity' type="number" min="1" max="999">
+                            <button type="submit">Add</button>
+                        </form>
+        			</div>
+
+        		</div>
+        	</article>
+        </div>
+   </div>
+    {% endfor %}-->
 {% endblock content %}

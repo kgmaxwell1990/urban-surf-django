@@ -35,6 +35,14 @@ p {
     padding: 0px;
 }
 
+.color_red {
+    color: red;
+}
+
+.color_black {
+    color: black;
+}
+
 .freedelivery {
     background-color: rgba(34, 128, 163, 0.8);
     margin: 0px;
@@ -91,18 +99,14 @@ nav {
 }
 
 .navbar-nav > div > li > a {
-      color: black;
       font-family: 'Lobster', cursive;
   }
 
-.navbar-nav > div > li > a > img {
+
+#bigscreenlogo {
     display: none;
 }
 
-
-.menubuttons > li > a {
-    color: black;
-}
 
 .navbar-nav .logo {
     opacity: 1;
@@ -116,6 +120,28 @@ nav {
 .navbar-toggle .icon-bar {
     background-color: black;
 }
+
+.hello > li > a {
+    font-family: Lobster, cursive;
+}
+
+.menubuttons > li > a {
+    font-family: Lobster, cursive;
+}
+
+.menubuttons > ul > li {
+    text-align: center;
+}
+
+.menubuttons > li {
+     display: table;
+    float: none;
+    margin: 0 auto;
+    table-layout: fixed;
+    font-size: 1.25em;
+    list-style: none;
+}
+
 
 .searchbox {
     border:1px solid gray;
@@ -142,11 +168,6 @@ button {
 .searchbox > input {
     padding-right:30px; /* button padding */
 }
-
-.searchbox > form {
-    border: none;
-}
-
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: black;
 }
@@ -160,43 +181,12 @@ button {
   color: black;
 }
 
-#salebutton {
-    color: red;
-}
+
 
 /* End Navbar CSS */
 
 
 /* Home CSS */
-
-.featured {
-    text-align: center;
-    max-height: 500px;
-}
-
-.featured > h1 {
-    color: black;
-    font-family: 'Oswald', sans-serif;
-}
-
-.scrollinrollinrollin > li {
-    display: inline;
-}
-
-.scrollinrollinrollin > li > a > img {
-    border: 1px solid;
-    margin: 5px;
-}
-
-.featuredheading {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    color: black;
-    font-family: Oswald, cursive;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-}
 
 #mainimage {
     width: 100%;
@@ -210,12 +200,6 @@ button {
 
 #backgroundimg {
     display: none;
-}
-
-#featuredblog {
-    background-color: white;
-    text-align: justify;
-    padding: 10px;
 }
 
 .brandlogos {
@@ -238,9 +222,17 @@ button {
     bottom: 0;
 }
 
-#subscribetomagazine {
+#magazineandblog {
     text-align: center;
     padding: 10px;
+}
+
+#blog > h4 {
+    font-size: 30px;
+}
+
+#magazine > h4 {
+    font-size: 30px; 
 }
 
 .bloginfo {
@@ -282,13 +274,141 @@ button {
 
 /* End Home CSS */
 
-/* Products CSS */
 
-.products {
-    margin: 10px;
+
+
+/* Categories CSS */
+
+.col-item {
+  border: 1px solid #E1E1E1;
+  background: #FFF;
+  margin-bottom:12px;
+}
+.col-item .options {
+  position:absolute;
+  top:6px;
+  right:22px;
+}
+.col-item .photo {
+  overflow: hidden;
+}
+.col-item .photo .options {
+  display:none;
+}
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%;
 }
 
-/* Products CSS */
+.col-item .options-cart {
+  position:absolute;
+  left:22px;
+  top:6px;
+  display:none;
+}
+.col-item .photo:hover .options,
+.col-item .photo:hover .options-cart {
+  display:block;
+  -webkit-animation: fadeIn .5s ease;
+  -moz-animation: fadeIn .5s ease;
+  -ms-animation: fadeIn .5s ease;
+  -o-animation: fadeIn .5s ease;
+  animation: fadeIn .5s ease;
+}
+.col-item .options-cart-round {
+  position:absolute;
+  left:42%;
+  top:22%;
+  display:none;
+}
+.col-item .options-cart-round button {
+  border-radius: 50%;
+  padding:14px 16px;
+  
+}
+.col-item .options-cart-round button .fa {
+  font-size:22px;
+}
+.col-item .photo:hover .options-cart-round {
+  display:block;
+  -webkit-animation: fadeInDown .5s ease;
+  -moz-animation: fadeInDown .5s ease;
+  -ms-animation: fadeInDown .5s ease;
+  -o-animation: fadeInDown .5s ease;
+  animation: fadeInDown .5s ease;
+}
+.col-item .info {
+  padding: 10px;
+  margin-top: 1px;
+}
+.col-item .price-details {
+  width: 100%;
+  margin-top: 5px;
+}
+.col-item .price-details h1 {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  float:left;
+}
+.col-item .price-details .details {
+  margin-bottom: 0px;
+  font-size:12px;
+}
+.col-item .price-details span {
+  float:right;
+}
+.col-item .price-details .price-new {
+  font-size:16px;
+}
+.col-item .price-details .price-old {
+  font-size:18px;
+  text-decoration:line-through;
+}
+.col-item .separator {
+  border-top: 1px solid #E1E1E1;
+}
+
+.col-item .clear-left {
+  clear: left;
+}
+.col-item .separator a {
+  text-decoration:none;
+}
+.col-item .separator p {
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.col-item .separator p i {
+  margin-right: 5px;
+}
+.col-item .btn-add {
+  width: 60%;
+  float: left;
+}
+.col-item .btn-add a {
+  display:inline-block !important;
+}
+.col-item .btn-add {
+  border-right: 1px solid #E1E1E1;
+}
+.col-item .btn-details {
+  width: 40%;
+  float: left;
+  padding-left: 10px;
+}
+.col-item .btn-details a {
+  display:inline-block !important;
+}
+.col-item .btn-details a:first-child {
+  margin-right:12px;
+}
+
+/* End Categories CSS */
+
+
 
 /* Blog CSS */
 #blogpostsmain {
@@ -342,8 +462,37 @@ button {
 
 @media screen and (min-width:768px) {
 
-#logo {
-    margin-right: 300px;
+#bigscreenlogo {
+    display: inherit;
+}
+
+#mobilelogo {
+    display: none;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+   display: block;    
+}
+.hello {
+    margin-top: 30px;
+    height: 100px;
+    vertical-align: middle;
+    
+}
+
+.hello > li {
+    display: inline;
+}
+
+/*.navbar-nav {
+    display: inline;
+    
+}*/
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    text-align: center;
 }
 
 #navbarline {
@@ -391,9 +540,6 @@ hr {
     margin-bottom: 20px;
 }
 
-.navbar-header > a > img {
-    display: none;
-}
 
 .navright {
     margin-left: 300px;
@@ -490,8 +636,12 @@ hr {
 .card > img {
     max-width: 400px;
 }
-
+.menubuttons > li {
+    display: inline;
+}
 
 }
+
+
 
 
