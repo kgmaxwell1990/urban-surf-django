@@ -207,6 +207,10 @@ hr.navbarline {
     padding-left: 0px;
 }
 
+.menubuttons > li {
+    line-height: 10px;
+}
+
 .menubuttons > li > a {
     font-family: Lobster, cursive;
     font-size: 18px;
@@ -568,6 +572,7 @@ nav {
 
 .topnav {
     padding-top: 30px;
+    padding-right: 10%;
 }
 
 .topnav > li {
@@ -586,6 +591,10 @@ nav {
 
 #navbarline {
     position: relative;
+}
+
+#navbarlinetop {
+    margin-top: 10px;
 }
  
 .menubuttons > li {
