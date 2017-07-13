@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'disqus',
     'django.contrib.sites',
     'search',
+    'storages',
 
 ]
 
@@ -154,7 +155,10 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'Cache-Control': 'max-age=94608000',
+    }
 
 AWS_STORAGE_BUCKET_NAME = os.getenv('BUCKET_NAME')
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY')
