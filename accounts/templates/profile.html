@@ -16,12 +16,16 @@
     <p>You are logged in as {{ user.email }} </p>
 <!--<p>Your stripe id is {{ user.profile.stripe_id }} </p>-->
     
-    <h2>Subscription Details</h2>
+    <h2>Subscription to Monthly Magazine</h2>
 
     {% if user.profile.subscription_active %}
         <p>You have '{{ user.profile.subscription_end|timeuntil }}' left on your subscription.</p>
         <p>To cancel your subscription click 'Cancel Subscription' below</p>
         <p>
+            <a href="#"
+               onclick=""
+               class="btn btn-success">Change Subscription</a>
+
             <a href="{% url "cancel_subscription" %}"
                onclick="return cancelSubscriptionCheck();"
                class="btn btn-danger">Cancel Subscription</a>

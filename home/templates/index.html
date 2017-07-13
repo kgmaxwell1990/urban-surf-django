@@ -5,31 +5,56 @@
 
 {% comment %}<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>{% endcomment %}
 
+<div class="container-fluid">
 <div class="row">
-    <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
-    <img id="mobileimage" src="static/images/surfmobile.jpg" width="300px"/>
+    <!-- <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
+    <img id="mobileimage" src="static/images/surfmobile.jpg" width="300px"/> -->
 
-    <div class="col-sm-6 col-sm-offset-3">
-        <img id="mainimage" src="static/images/title2.png" width="300px"/>
-        <hr class="line1">
-        <hr class="line1">
-        <div class="enteremail">
-            <h4> Enter your email to sign up to daily newsletter for updates on surf conditions and special offers </h4>
+    <div class="col-sm-12 jumbo" style="background-image: url('{% static 'images/backgroundsurfing.jpg'%}')">
+        <div class="jumbocontents">
+            <img id="headerlogo" src="static/images/title2.png" width="300px"/>
+            <hr class="line1">
+            <hr class="line1">
+            <div class="enteremail">
+                <h4> Enter your email to sign up to daily newsletter for updates on surf conditions and special offers </h4>
 
-            <form class="navbar-form emailform" role="collectemail">
-                    <div class="input-group add-on">
-                        <input class="form-control" id="srch-term" type="text" name="subscribe" 
-                        placeholder="Enter your email"/>
-                            <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">Submit</button>
-                            </div>
-                    </div>
-            </form>
+                <form class="navbar-form emailform" role="collectemail">
+                        <div class="input-group add-on">
+                            <input class="form-control" id="srch-term" type="text" name="subscribe" 
+                            placeholder="Enter your email"/>
+                                <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">Submit</button>
+                                </div>
+                        </div>
+                </form>
+            </div>
         </div>
     </div>
 
+    <div class="col-sm-12 jumbomobile" style="background-image: url('{% static 'images/backgroundsurfingmobile.jpg'%}')">
+        <div class="jumbocontentsmobile">
+            <img id="headerlogomobile" src="static/images/title2.png" width="300px"/>
+            <hr class="line1">
+            <hr class="line1">
+            <div class="enteremailmobile">
+                <h4> Receive a daily newsletter with updates on surf conditions and special offers </h4>
+
+                <form class="navbar-form emailform" role="collectemail">
+                        <div class="input-group add-on">
+                            <input class="form-control" id="srch-term" type="text" name="subscribe" 
+                            placeholder="Enter your email"/>
+                                <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">Submit</button>
+                                </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+<br>
 
 <div class="col-sm-12 brandlogos">
     <ul>
@@ -49,9 +74,9 @@
 <div id="magazineandblog">
     <div class="row">
         <div class="col-sm-6" id="magazine">
-            <h4> Subscribe to monthly magazine</h4>
+            <h4> <a href='{% url 'login' %}' style="color:green">Subscribe </a> to monthly magazine</h4>
             <img src="static/images/surfermagazine.jpg" alt="magazine" width="60%"/>
-            <p><button type="submit" class="btn btn-lg"> Subscribe</button></p>
+            <!-- <p><button type="submit" class="btn btn-lg btn-success subscribebutton" onclick="location.href='{% url 'login' %}'"> Subscribe</button></p> -->
         </div>   
 
         <div class="col-sm-6" id="blog">
@@ -82,28 +107,29 @@
     <div class="row">
         <div class="col-sm-6 cardclothes">
             <img src="static/images/menswear.jpg"/>
-            <button type="submit" class="btn btn-lg buttoncard"> Shop Men </button>
+            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 1 %}'"> Shop Men </button>
         </div>
         <div class="col-sm-6 cardclothes">
             <img src="static/images/womanswear.jpg"/>
-            <button type="submit" class="btn btn-lg buttoncard"> Shop Women </button>
+            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 2 %}'"> Shop Women </button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-4 card">
             <img src="static/images/surfgear.jpg"/>
-            <button type="submit" class="btn btn-lg buttoncard"> Shop Surf Gear </button>
+            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 3 %}'"> Shop Surf Gear </button>
         </div>
         <div class="col-sm-4 card">
             <img src="static/images/accessories.jpg" />
-            <button type="submit" class="btn btn-lg buttoncard"> Shop Accessories </button>
+            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 5 %}'"> Shop Accessories </button>
         </div>
         <div class="col-sm-4 card">
             <img src="static/images/footwear.jpg" />
-            <button type="submit" class="btn btn-lg buttoncard"> Shop Footwear </button>
+            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 4 %}'"> Shop Footwear </button>
         </div>
     </div>
+</div>
 </div>
 
 

@@ -239,9 +239,8 @@ hr.navbarline {
 
 /* -----------------------------------------Home CSS----------------------------------------- */
 
-#mainimage {
-    width: 100%;
-    margin-top: 10%;
+/* #backgroundimg {
+    display: none;
 }
 
 #mobileimage {
@@ -249,6 +248,41 @@ hr.navbarline {
     max-height: 400px;
     width: 100%;
     position: absolute;
+}  */
+
+/* #headerlogo {
+    width: 40%;
+    margin: 10% 30%;
+} */
+.jumbo {
+    display: none;
+}
+
+.jumbomobile {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    /* position: relative; */
+    width: 100%;
+} 
+
+
+#headerlogomobile {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+}
+
+hr.line1 {
+  border: 0; 
+  height: 2px; 
+  margin-right: 20%;
+  margin-left: 20%;
+  background-image: -webkit-linear-gradient(left, transparent, black, transparent);
+  background-image: -moz-linear-gradient(left, transparent, black, transparent);
+  background-image: -ms-linear-gradient(left, transparent, black, transparent);
+  background-image: -o-linear-gradient(left, transparent, black, transparent); 
 }
 
 .enteremail {
@@ -257,19 +291,6 @@ hr.navbarline {
 }
 
 
-
-#backgroundimg {
-    display: none;
-}
-
-hr.line1 {
-  border: 0; 
-  height: 2px; 
-  background-image: -webkit-linear-gradient(left, transparent, black, transparent);
-  background-image: -moz-linear-gradient(left, transparent, black, transparent);
-  background-image: -ms-linear-gradient(left, transparent, black, transparent);
-  background-image: -o-linear-gradient(left, transparent, black, transparent); 
-}
 
 .brandlogos {
     padding: 0;
@@ -339,6 +360,7 @@ hr.line1 {
     font-family: Oswald, sans-serif;
     font-weight: 900;
     text-transform: uppercase;
+    text-shadow: 1.5px 1.5px black;
 }
 
 /* ------------------------------------------End Home CSS -----------------------------------------*/
@@ -618,6 +640,7 @@ nav {
 
 #navbarlinetop {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
  
 .menubuttons > li {
@@ -639,15 +662,39 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 /* ---------------------------------------- Home CSS ----------------------------------------- */
 
 
-#backgroundimg {
+/* #backgroundimg {
     display: inherit;
     width: 100%;
     position: absolute;
-}
+} */
+/* #mobileimage {
+    display: none;
+} */
 
-#mobileimage {
+.jumbomobile {
     display: none;
 }
+
+ .jumbo {
+    display: inherit;
+    background-repeat: no-repeat;
+    /* background-position: 0 0; */
+    background-size: cover;
+    background-position: cover;
+    position: relative;
+    width: 100%;
+} 
+
+.jumbocontents {
+    margin: 10% 25%
+}
+
+#headerlogo {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 
 #shopnowimages > div > img {
     width: 100%;
@@ -660,8 +707,7 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 
 .brandlogos {
     margin: 0 auto;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -678,6 +724,10 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 
 #subscribetomagazine {
     text-align: center;
+}
+
+.subscribebutton {
+    margin-top: 10px;
 }
 
 .cardclothes > img {
