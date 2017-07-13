@@ -7,12 +7,12 @@
 
 <div class="container-fluid">
 <div class="row">
-    <!-- <img id="backgroundimg" src="static/images/backgroundsurfing.jpg"/>
-    <img id="mobileimage" src="static/images/surfmobile.jpg" width="300px"/> -->
+    <!-- <img id="backgroundimg" src="{% static 'images/backgroundsurfing.jpg' %}"/>
+    <img id="mobileimage" src="{% static 'images/surfmobile.jpg' %}" width="300px"/> -->
 
     <div class="col-sm-12 jumbo" style="background-image: url('{% static 'images/backgroundsurfing.jpg'%}')">
         <div class="jumbocontents">
-            <img id="headerlogo" src="static/images/title2.png" width="300px"/>
+            <img id="headerlogo" src="{% static 'images/title2.png' %}" width="300px"/>
             <hr class="line1">
             <hr class="line1">
             <div class="enteremail">
@@ -33,7 +33,7 @@
 
     <div class="col-sm-12 jumbomobile" style="background-image: url('{% static 'images/backgroundsurfingmobile.jpg'%}')">
         <div class="jumbocontentsmobile">
-            <img id="headerlogomobile" src="static/images/title2.png" width="300px"/>
+            <img id="headerlogomobile" src="{% static 'images/title2.png' %}" width="300px"/>
             <hr class="line1">
             <hr class="line1">
             <div class="enteremailmobile">
@@ -58,12 +58,12 @@
 
 <div class="col-sm-12 brandlogos">
     <ul>
-        <li><img class="brandlogo" src="static/images/dc.png"/></li>
-        <li><img class="brandlogo" src="static/images/vans.png"/></li>
-        <li><img class="brandlogo" src="static/images/roxy.png"/></li>
-        <li><img class="brandlogo" src="static/images/osiris.png"/></li>
-        <li><img class="brandlogo" src="static/images/es.png"/></li>
-        <li><img class="brandlogo" src="static/images/vissla.png"/></li>
+        <li><img class="brandlogo" src="{% static 'images/dc.png' %}"/></li>
+        <li><img class="brandlogo" src="{% static 'images/vans.png' %}"/></li>
+        <li><img class="brandlogo" src="{% static 'images/roxy.png' %}"/></li>
+        <li><img class="brandlogo" src="{% static 'images/osiris.png' %}"/></li>
+        <li><img class="brandlogo" src="{% static 'images/es.png' %}"/></li>
+        <li><img class="brandlogo" src="{% static 'images/vissla.png' %}"/></li>
     </ul>
 </div>
 
@@ -79,7 +79,7 @@
                 style="color:green">Subscribe </a> to monthly magazine
             </h4>
 
-            <img src="static/images/surfermagazine.jpg" alt="magazine" width="60%"/>
+            <img src="{% static 'images/surfermagazine.jpg' %}" alt="magazine" width="60%"/>
             <!-- <p><button type="submit" class="btn btn-lg btn-success subscribebutton" onclick="location.href='{% url 'login' %}'"> Subscribe</button></p> -->
         </div>   
 
@@ -110,26 +110,26 @@
 <div class="containercards">
     <div class="row">
         <div class="col-sm-6 cardclothes">
-            <img src="static/images/menswear.jpg"/>
+            <img src="{% static 'images/menswear.jpg' %}"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 1 %}'"> Shop Men </button>
         </div>
         <div class="col-sm-6 cardclothes">
-            <img src="static/images/womanswear.jpg"/>
+            <img src="{% static 'images/womanswear.jpg' %}"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 2 %}'"> Shop Women </button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-4 card">
-            <img src="static/images/surfgear.jpg"/>
+            <img src="{% static 'images/surfgear.jpg' %}"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 3 %}'"> Shop Surf Gear </button>
         </div>
         <div class="col-sm-4 card">
-            <img src="static/images/accessories.jpg" />
+            <img src="{% static 'images/accessories.jpg' %}" />
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 5 %}'"> Shop Accessories </button>
         </div>
         <div class="col-sm-4 card">
-            <img src="static/images/footwear.jpg" />
+            <img src="{% static 'images/footwear.jpg' %}" />
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 4 %}'"> Shop Footwear </button>
         </div>
     </div>
