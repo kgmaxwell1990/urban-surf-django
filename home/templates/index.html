@@ -74,7 +74,11 @@
 <div id="magazineandblog">
     <div class="row">
         <div class="col-sm-6" id="magazine">
-            <h4> <a href='{% url 'login' %}' style="color:green">Subscribe </a> to monthly magazine</h4>
+            <h4> 
+                <a href="{% if user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'login' %}{% endif %}" 
+                style="color:green">Subscribe </a> to monthly magazine
+            </h4>
+
             <img src="static/images/surfermagazine.jpg" alt="magazine" width="60%"/>
             <!-- <p><button type="submit" class="btn btn-lg btn-success subscribebutton" onclick="location.href='{% url 'login' %}'"> Subscribe</button></p> -->
         </div>   

@@ -12,33 +12,51 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
+<div class="container-fluid">
+    <div class="row" style="text-align:center">
+        <div class="col-sm-12">
+            <h2>Success!</h2>
+            <p> Hi {{ user.username }} You Have Successfully Logged In! </p>
+            <p>The email address linked to this account is {{ user.email }} </p>
+        </div>
+    </div>
 <!--<p>Your stripe id is {{ user.profile.stripe_id }} </p>-->
-    
-    <h2>Subscription to Monthly Magazine</h2>
+    <div class="row" style="text-align:center">
+        <div class="col-sm-4">
+            <h2>Subscription to Monthly Magazine</h2>
+                    {% if user.profile.subscription_active %}
+                        <p>You have '{{ user.profile.subscription_end|timeuntil }}' left on your subscription.</p>
+                        <p>To cancel your subscription click 'Cancel Subscription' below</p>
+                        <p>
+                            <a href="#"
+                            onclick=""
+                            class="btn btn-success">Change Subscription</a>
 
-    {% if user.profile.subscription_active %}
-        <p>You have '{{ user.profile.subscription_end|timeuntil }}' left on your subscription.</p>
-        <p>To cancel your subscription click 'Cancel Subscription' below</p>
-        <p>
-            <a href="#"
-               onclick=""
-               class="btn btn-success">Change Subscription</a>
+                            <a href="{% url "cancel_subscription" %}"
+                            onclick="return cancelSubscriptionCheck();"
+                            class="btn btn-danger">Cancel Subscription</a>
+                        </p>
+                    {% else %}
+                        <p>You don't have an active subscription.</p>
+                        <p>To subscribe, click 'Subscribe' below</p>
+                        <p>
+                            <a href="{% url "subscribe" %}"
+                            onclick="return subscribeCheck();"
+                            class="btn btn-success">Subscribe</a>
+                        </p>
+                    {% endif %}
+        </div>
 
-            <a href="{% url "cancel_subscription" %}"
-               onclick="return cancelSubscriptionCheck();"
-               class="btn btn-danger">Cancel Subscription</a>
-        </p>
-    {% else %}
-        <p>You don't have an active subscription.</p>
-        <p>To subscribe, click 'Subscribe' below</p>
-        <p>
-            <a href="{% url "subscribe" %}"
-               onclick="return subscribeCheck();"
-               class="btn btn-success">Subscribe</a>
-        </p>
-    {% endif %}
+
+
+        <div class="col-sm-4">
+            <h2>Your Orders</h2>
+        </div>
+
+        <div class="col-sm-4">
+            <h2>Your Address</h2>
+        </div>
+    </div>
 
     
 
