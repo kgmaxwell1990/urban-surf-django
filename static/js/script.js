@@ -1,21 +1,26 @@
 $(document).ready(function () {
-    // $('.navbarcontainer .dropdown').hover(function () {
-    //     $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
-    // }, function () {
-    //     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(105)
-    // });
 
-
-    // $('.scrollinrollinrollin').scrollbox({
-    //     direction: 'v',
-    //     linear: true,
-    //     step: 1,
-    //     delay: 0,
-    //     speed: 100
-    // });
     
+// });
+
+// $(function () {
+//   $('[data-toggle="tooltip"]').tooltip();
+// });
+
+
+
+$('.pop-up').hide(0);
+$('.pop-up-container').hide(0);
+
+$('.pop-up-button').click(function(){
+  $('.pop-up-container').show(0);
+  $('.pop-up').fadeIn(300);
+  $('.pop-up-button').hide(0);
+});
+$('.pop-up span').click(function() {
+  $('.pop-up-container').hide(0);
+  $('.pop-up').hide(0);
+  $('.pop-up-button').show(0);
 });
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
 });

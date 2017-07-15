@@ -56,36 +56,63 @@
     {% for product in products %}
 
         <div class="col-sm-3">
-            <article class="col-item">
-            	<div class="photo">
+            <div class="col-item ">
+            	<div class="photo col-sm-12">
+                    <a href="#"> <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image" /> </a>
+                    
         			<div class="options-cart-round">
-        				<button class="btn btn-default" title="Add to cart" onclick="location.href='{% url 'add_to_cart' product.id %}'">
+        				<a class="btn pop-up-button" title="Add to cart" href="#">
         					<span class="fa fa-shopping-cart"></span>
-        				</button>
-        			</div>
-        			<a href="#"> <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image" /> </a>
-        		</div>
-        		<div class="info">
-        			<div class="row">
-        				<div class="price-details col-md-6">
-        					<p class="details">
-        						Lorem ipsum dolor sit amet, consectetur..
-        					</p>
-        					<h1>{{ product.name }}</h1>
-        					<span class="price-new">{{ product.price }}</span>
-                            <a href="{% url 'buy_now_stripe' product.id %}" )>Buy Now</a>
-        				</div>
-                            <form method="post" action="{% url 'add_to_cart' product.id %}">
-                            {% csrf_token %}
-                            Quantity
-                            <input name='quantity' type="number" min="1" max="5">
-                            <button type="submit">Add</button>
-                        </form>
-        			</div>
+                        </a>
+                    </div>
 
+                </div>
+                
+        		<div class="info col-sm-12">
+        				<div class="price-details col-sm-12">
+                            <h2 class="oswald">{{ product.name }}</h2>
+                        </div>
+                        <div class="col-sm-12">
+        					<span class="price-new left">€{{ product.price }}</span>
+                            <a href="{% url 'buy_now_stripe' product.id %}" class="btn btn-sm btn-success right">Buy It Now  </a> </br>
+                            <a class="btn btn-sm btn-success pop-up-button right" title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-chevron-right"></span></a>
+        				</div>
         		</div>
-        	</article>
+        	</div>
         </div>
+
+        <div class="pop-up">
+                <span>x</span>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image"/>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="pop-up-text">
+                                <h1>{{ product.name }}</h1>
+                                <p>{{ product.description}} </p>
+                                <p> €{{ product.price }} </p>
+                                <p> Select Size </p>
+                                <select name="size">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                </select></br></br>
+                                        <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                        {% csrf_token %}
+                                        Quantity
+                                        <input name='quantity' type="number" min="1" max="5">
+                                        <button type="submit">Add To Cart</button>
+                                    </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="pop-up-container"></div>
 
     {% endfor %} 
    </div>

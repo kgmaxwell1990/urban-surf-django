@@ -13,14 +13,16 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="col-sm-12">
     <table class="table table-striped">
         <thead>
         <tr>
             <th>Image</th>
             <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
+            <th>Size </th>
             <th>Quantity</th>
+            <th>Price</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -29,9 +31,9 @@
             <tr>
                 <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
                 <td>{{ item.product.name }}</td>
-                <td>{{ item.product.description }}</td>
-                <td>{{ item.product.price }}</td>
+                <td>{{ item.product.size}}</td>
                 <td>{{ item.quantity }}</td>
+                <td>{{ item.product.price }}</td>
                 <td>
                     <form method="post" action="{% url 'adjust_cart' item.id %}">
                         {% csrf_token %}
@@ -47,27 +49,40 @@
             <td></td>
             <td></td>
             <td></td>
+            <td>Basket Total</td>
             <td>{{ total }}</td>
-            <td></td>
             <td></td>
         </tr>
         </tbody>
     </table>
+</div>
 
     <hr>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <form role="form" method="POST" id="address-form">
+            <legend> Enter Your Address </legend>
 
-    <form role="form" method="post" id="payment-form" action="{% url 'cart' %}">
-        <div id="credit-card-errors" style="display:none">
-            <div class="alert-message block-message error" id="stripe-error-message"></div>
-        </div>
+        </form>
+    </div>
+        
+        
+    <div class="col-sm-12 col-md-6 col-lg-6">   
+        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}">
+            <div id="credit-card-errors" style="display:none">
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
+            </div>
 
-        <legend>Pay Now!</legend>
+            <legend>Pay Now!</legend>
 
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <div class="form-group">
-            <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-        </div>
-    </form>
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <div class="form-group">
+                <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+            </div>
+        </form>
+    </div>
+</div>
+</div>
 
 {% endblock %}

@@ -12,22 +12,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/gif" sizes="16x16">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    
     {% block head_js %}{% endblock %}
 </head>
 <body>
 
 <div class="container" style="width: 100%">
     <div class="freedelivery">
-        <h4 class="freedeliverytext">Free Delivery on all orders €50 & over <button type="button" 
-        data-toggle="modal" data-target="#myModal">(t&c's *) </button>| <button class="fa fa-facebook" href="#" target="_blank"/>  
+        <h4 class="freedeliverytext"><a href="#" data-toggle="modal" data-target="#myModal">
+        Free Delivery on all orders over €50 * </a> | Follow us on <button class="fa fa-facebook" href="#" target="_blank"/>  
         <button class="fa fa-twitter" href="#" target="_blank"/>  <button class="fa fa-instagram" href="#" target="_blank"/>  
         <button class="fa fa-pinterest" href="#" target="_blank"/> 
         </h4>
@@ -39,10 +33,10 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Terms & Conditions for Free Delivery</h4>
+                <h2 class="modal-title">Terms & Conditions for Free Delivery</h2>
             </div>
             <div class="modal-body">
-                <p>Total Order must be equal to or over €50 and Delivery Addres must be in Ireland</p>
+                <p>Total Order must be equal to or over €50 and Delivery Address must be in Ireland</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -131,7 +125,7 @@
                         <li><a href="{% url 'blog' %}" class="color_black"> Blog </a></li> 
                     </ul>
                 </div>
-                <hr class="navbarline">
+                <hr class="navbarline" id="navbarlinebottom">
                 
 
         </div>
@@ -179,10 +173,83 @@
         <div class="row">
             <div class="col-sm-3 footerinfo">
                 <h4>HOW WE CAN HELP</h4>
-                <h5><a href="#"> Free Delivery </a></h5>
-                <h5><a href="#"> Easy Returns </a></h5>
-                <h5><a href="#"> FAQs </a></h5>
-                <h5><a href="#"> About Us </a></h5>
+                <h5><a href="#" data-toggle="modal" data-target="#myModal"> Free Delivery </a></h5>
+                <h5><a href="#" data-toggle="modal" data-target="#myReturnsModal"> Easy Returns </a></h5>
+                <h5><a href="#" data-toggle="modal" data-target="#myFAQModal"> FAQs </a></h5>
+                <h5><a href="#" data-toggle="modal" data-target="#myAboutModal"> About Us </a></h5>
+
+
+                <!-- Modal for Returns -->
+                <div id="myReturnsModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Returns Process</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>You have 30 days from the date on which the goods were received to return any item for a refund. </br> For alternative sizes, you will need to place a new order. </br> Not to worry though, this is usually way quicker than waiting for an exchange to be processed.
+                        If you are returning a large product e.g. surfboard, luggage, etc. please contact us.</p>
+                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
+                <!-- Modal for FAQ's -->
+                <div id="myFAQModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h4>How can you track your order?</h4>
+                        <p>All of our delivery service in Ireland are tracked.</br>
+                           You can track your order from the dispatch email confirmation or using your tracking number on our carrier's websites.</br>
+                           To find your tracking number please connect to your Surfdome account or click here if you ordered as a guest. </br>
+                           If your order is not tracked or if you have any question, please contact us.</br>
+                           Track your parcel on our carrier's websites:</br>
+                        </p>
+                        <h4>Can we cancel or change your order?</h4>
+                        <p>Once an order has been placed, we are unable to cancel or amend it. </br> However you can return any unwanted or incorrectly ordered items for a refund once you have received your order.</p>
+                        <h4>What is our returns process?</h4>
+                        <p>You have 30 days from the date on which the goods were received to return any item for a refund. </br> For alternative sizes, you will need to place a new order. </br> Not to worry though, this is usually way quicker than waiting for an exchange to be processed.
+                        If you are returning a large product e.g. surfboard, luggage, etc. please contact us.</p>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Modal for About Us  -->
+                <div id="myAboutModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">About Us</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>We are an Irish Owned Business based in Donegal </br> Contacts us on (+353)123456789</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> NEWSLETTER </h4>
