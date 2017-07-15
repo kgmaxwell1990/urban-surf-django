@@ -53,7 +53,7 @@ def user_cart(request):
     args = {'form': form,
             'items': cartItems,
             'total': total,
-            'publishable': settings.STRIPE_PUBLISHABLE}
+            'publishable': settings.STRIPE_PUBLISHABLE_KEY}
     args.update(csrf(request))
 
     return render(request, 'cart.html', args)

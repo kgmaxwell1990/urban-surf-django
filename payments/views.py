@@ -39,7 +39,7 @@ def buy_now(request, id):
         form = MakePaymentForm()
         product = get_object_or_404(Products, pk=id)
 
-    args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE, 'product': product}
+    args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE_KEY, 'product': product}
     args.update(csrf(request))
 
     return render(request, 'pay.html', args)

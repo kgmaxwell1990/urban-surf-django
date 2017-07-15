@@ -16,7 +16,7 @@
             <hr class="line1">
             <hr class="line1">
             <div class="enteremail">
-                <h4> Enter your email to sign up to daily newsletter for updates on surf conditions and special offers </h4>
+                <h4> Sign up for daily updates on surf conditions and special offers </h4>
 
                 <form class="navbar-form emailform" role="collectemail">
                         <div class="input-group add-on">
@@ -109,27 +109,27 @@
     
 <div class="containercards">
     <div class="row">
-        <div class="col-sm-6 cardclothes">
-            <img src="{% static 'images/menswear.jpg' %}"/>
+        <div class="col-sm-12 col-md-6 col-lg-6 cardclothes">
+            <img src="{% static 'images/menswear.jpg' %}" width="300px"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 1 %}'"> Shop Men </button>
         </div>
-        <div class="col-sm-6 cardclothes">
-            <img src="{% static 'images/womanswear.jpg' %}"/>
+        <div class="col-sm-12 col-md-6 col-lg-6 cardclothes">
+            <img src="{% static 'images/womanswear.jpg' %}" width="300px"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 2 %}'"> Shop Women </button>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-4 card">
-            <img src="{% static 'images/surfgear.jpg' %}"/>
+        <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <img src="{% static 'images/surfgear.jpg' %}" width="300px"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 3 %}'"> Shop Surf Gear </button>
         </div>
-        <div class="col-sm-4 card">
-            <img src="{% static 'images/accessories.jpg' %}" />
+        <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <img src="{% static 'images/accessories.jpg' %}" width="300px" />
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 5 %}'"> Shop Accessories </button>
         </div>
-        <div class="col-sm-4 card">
-            <img src="{% static 'images/footwear.jpg' %}" />
+        <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <img src="{% static 'images/footwear.jpg' %}"  width="300px"/>
             <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 4 %}'"> Shop Footwear </button>
         </div>
     </div>

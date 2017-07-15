@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-sm-12">
         <form role="form" method="post" action="{% url 'register' %}">
-            <legend>Create a new account or <a href="{% url 'login' %}">Login</legend>
+            <legend>Create a new account or <a href="{% url 'login' %}">Login</a></legend>
             {% csrf_token %}
             {{ form | as_bootstrap }}
             <div class="form-group">
