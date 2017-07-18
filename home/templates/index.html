@@ -97,6 +97,7 @@
                 <hr class="line1">
                     <div class="bloginfo">
                         <p> {{ post.content|truncatewords:15 }}</p>
+                        <button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button>
                     </div>
                 <hr class="line1">
         {% endfor %}
