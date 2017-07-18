@@ -89,7 +89,7 @@
         </div>   
 
         <div class="col-sm-6" id="blog">
-                <h4> Latest from the Blog </h4>
+                <h4><a href="{% url 'blog' %}"> Latest from the Blog </a></h4>
         {% for post in posts %}
 
                 <hr class="line1">
@@ -97,7 +97,6 @@
                 <hr class="line1">
                     <div class="bloginfo">
                         <p> {{ post.content|truncatewords:15 }}</p>
-                        <button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button>
                     </div>
                 <hr class="line1">
         {% endfor %}
