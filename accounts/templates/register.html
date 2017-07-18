@@ -3,8 +3,8 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-sm-12">
-        <form role="form" method="post" action="{% url 'register' %}">
+    <div class="col-sm-12 ">
+        <form role="form" method="post" action="{% url 'register' %}" class="align_centre margin_20">
             <legend>Create a new account or <a href="{% url 'login' %}">Login</a></legend>
             {% csrf_token %}
             {{ form | as_bootstrap }}

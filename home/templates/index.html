@@ -3,12 +3,8 @@
 
 {% block content %}
 
-{% comment %}<div class="image" style="background-image: url('{% static 'images/surfing.jpg'%}')"></div>{% endcomment %}
-
 <div class="container-fluid">
 <div class="row">
-    <!-- <img id="backgroundimg" src="{% static 'images/backgroundsurfing.jpg' %}"/>
-    <img id="mobileimage" src="{% static 'images/surfmobile.jpg' %}" width="300px"/> -->
 
     <div class="col-sm-12 jumbo" style="background-image: url('{% static 'images/backgroundsurfing.jpg'%}')">
         <div class="jumbocontents">
@@ -17,17 +13,6 @@
             <hr class="line1">
             <div class="enteremail">
                 <h4> Sign up for daily updates on surf conditions and special offers </h4>
-
-                <!-- <form class="navbar-form emailform" role="collectemail">
-                        <div class="input-group add-on">
-                            <input class="form-control" id="srch-term" type="text" name="subscribe" 
-                            placeholder="Enter your email"/>
-                                <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">Submit</button>
-                                </div>
-                        </div>
-                </form> -->
-
                 <a href="{% url 'register' %}" class="btn btn-lg btn-success">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
             </div>
         </div>
@@ -40,18 +25,7 @@
             <hr class="line1">
             <div class="enteremailmobile">
                 <h4> Sign up for daily updates on surf conditions and special offers </h4>
-<!-- 
-                <form class="navbar-form emailform" role="collectemail">
-                        <div class="input-group add-on">
-                            <input class="form-control" id="srch-term" type="text" name="subscribe" 
-                            placeholder="Enter your email"/>
-                                <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">Submit</button>
-                                </div>
-                        </div>
-                </form> -->
-
-                <a href="{% url 'register' %}" class="btn btn-lg btn-success">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                <a href="{% url 'register' %}" class="btn btn-lg btn-success color_black">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
                
             </div>
         </div>
@@ -86,22 +60,23 @@
 
             <img src="{% static 'images/surfermagazine.jpg' %}" alt="magazine" width="60%"/>
             <!-- <p><button type="submit" class="btn btn-lg btn-success subscribebutton" onclick="location.href='{% url 'login' %}'"> Subscribe</button></p> -->
-        </div>   
+        </div>  
 
+        <a href="{% url 'blog' %}">
         <div class="col-sm-6" id="blog">
-                <h4><a href="{% url 'blog' %}"> Latest from the Blog </a></h4>
+                <h4><a href="{% url 'blog' %}" class="color_black"> Latest from the Blog </h4>
         {% for post in posts %}
 
                 <hr class="line1">
                     <h5> {{ post.title}}</h5>
                 <hr class="line1">
                     <div class="bloginfo">
-                        <p> {{ post.content|truncatewords:15 }}</p>
+                        <p class="color_black"> {{ post.content|truncatewords:15 }}</p>
                     </div>
-                <hr class="line1">
         {% endfor %}
             
         </div>
+        </a>
     </div>
 </div>
     

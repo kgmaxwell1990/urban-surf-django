@@ -38,6 +38,15 @@ p {
     font-family: Oswald, sans-serif;
 }
 
+.align_centre {
+    text-align: center;
+}
+
+.margin_20 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .container {
     width: 100%;
     margin: 0px;
@@ -546,15 +555,6 @@ hr.line1 {
   border-radius:5px;
   box-shadow:0 0 20px #000;
 }
-/* .pop-up-container{
-  height:100vh;
-  width:100%;
-  background:#000;
-  opacity:.5;
-  position:relative;
-  z-index:-1;
-  margin-top:-500px;
-} */
 
 .pop-up > span {
   border-radius:3em;
@@ -592,6 +592,22 @@ hr.line1 {
   margin-bottom:10px;
 } 
 
+.btn-success {
+    background-image: linear-gradient(rgba(34, 128, 163, 0.8), rgba(34, 128, 163, 0.8), rgba(34, 128, 163, 0.8));
+    color: black;
+    border-color: rgba(34, 128, 163, 0.8);
+    border-radius: 25px;
+    }
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active    {
+    background-color: #47a447;
+    color: #FFF;
+    border-color: #398439;
+    }
+
+
+
 /* -----------------------------------------End Categories CSS--------------------------------- */
 
 
@@ -613,6 +629,16 @@ hr.line1 {
 /*----------------------------------------- End Blog CSS -----------------------------------------*/
 
 
+/* -----------------------------------------Account CSS -----------------------------------------*/
+.form-control {
+    width: 100%;
+}
+
+body > div > div.row > div > form {}
+
+
+
+/* ----------------------------------------- End Account CSS ------------------------------------*/
 
 /* -----------------------------------------Cart CSS -----------------------------------------*/
 

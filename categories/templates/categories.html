@@ -1,11 +1,5 @@
 {% extends 'base.html' %}
 
-{% comment %}{% block sidebar %}
-    {% for category in categories %}
-        <li class="category-name"><a href="{% url 'category' category.id %}">{{ category.name }}</a></li>
-    {% endfor %}
-{% endblock sidebar %}{% endcomment %}
-
 
 {% block content %}
 
@@ -78,37 +72,6 @@
     </ol>
 
 
-     <!-- <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Buy</th>
-            <th>Cart</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for product in products %}
-            <tr>
-                <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td><a href="{% url 'buy_now_stripe' product.id %}" )>Buy Now</a></td>
-                {#                    <td><a href="{% url 'add_to_cart' product.id %}")>Add To Cart</a></td>#}
-                <td>
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        Quantity
-                        <input name='quantity' type="number" min="1" max="999">
-                        <button type="submit">Add</button>
-                    </form>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>  -->
-
 <div class="row">
     {% for product in products %}
 
@@ -125,7 +88,7 @@
 
                 </div>
                 
-        		<div class="info col-sm-12">
+        		<div class="info col-sm-12 align_centre">
                     <div class="row">
         				<div class="price-details col-sm-12">
                             <h2 class="oswald">{{ product.name }}</h2>
@@ -138,10 +101,10 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <p><a href="{% url 'buy_now_stripe' product.id %}" class="btn btn-sm btn-success">Buy It Now  </a> </p>
+                            <p><a href="{% url 'buy_now_stripe' product.id %}" class="btn btn-sm btn-success color_black">Buy It Now  </a> </p>
                         </div>
                         <div class="col-sm-6">
-                            <p><a class="btn btn-sm btn-success pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}"  title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                            <p><a class="btn btn-sm btn-success pop-up-button color_black" data-toggle="modal" data-target="#myModal{{ product.id }}"  title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-chevron-right"></span></a></p>
                         </div>
                     </div>
         		</div>

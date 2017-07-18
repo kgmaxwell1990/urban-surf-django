@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-    <form id="payment-form" role="form" method="post" action="{% url 'subscribe' %}">
+    <form id="payment-form" role="form" method="post" action="{% url 'subscribe' %}" class="align_centre margin_10">
         <legend>Subscribe</legend>
         {% csrf_token %}
         {{ form | as_bootstrap }}

@@ -1,40 +1,73 @@
 {% extends "base.html" %}
 {% block content %}
-    <a href="/"> Back to Home</a>
-    <div class="products">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Buy</th>
-                <th>Cart</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for product in Products %}
-                <tr>
-                    <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>{{ product.price }}</td>
-                    <td><a href="{% url 'buy_now_stripe' product.id %}" )>Buy Now</a></td>
-                    {#                    <td><a href="{% url 'add_to_cart' product.id %}")>Add To Cart</a></td>#}
-                    <td>
-                        <form method="post" action="{% url 'add_to_cart' product.id %}">
-                            {% csrf_token %}
-                            Quantity
-                            <input name='quantity' type="number" min="1" max="999">
-                            <button type="submit">Add</button>
-                        </form>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+{% for product in products %}
+<div id="myModal{{product.id}}" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title oswald">{{ product.name }}</h4>
+      </div>
+      <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image"/>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="pop-up-text">
+                                <p>{{ product.description}} </p>
+                                <p> €{{ product.price }} </p>
+
+                                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                                <select name="size" class="size">
+                                <option value="-1">Select Size...</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                </select>
+                            </br></br>
+
+                                        Quantity
+                                        <input name='quantity' type="number" value="1" min="1" max="5"/>
+                                        <button type="submit">Add To Cart</button>
+                                    </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+
+
+  </div>
+</div>
+{% endfor %}
+
+
+
+
+    <a href="/"> Back to Home</a>
+
+    <ol class="breadcrumb">
+        {% for crumb in crumbs %}
+            {% if forloop.last %}
+                <li class="active">{{ crumb.name }}</li>
+            {% else %}
+                <li><a href="{% url 'category' crumb.id %}">{{ crumb.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
 
 <div class="row">
     {% for product in products %}
@@ -45,7 +78,7 @@
                     <a href="#"> <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image" /> </a>
                     
         			<div class="options-cart-round">
-        				<a class="btn pop-up-button" title="Add to cart" href="#">
+        				<a class="btn pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}" title="Add to cart" href="#">
         					<span class="fa fa-shopping-cart"></span>
                         </a>
                     </div>
@@ -53,19 +86,29 @@
                 </div>
                 
         		<div class="info col-sm-12">
+                    <div class="row">
         				<div class="price-details col-sm-12">
                             <h2 class="oswald">{{ product.name }}</h2>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-12">
-        					<span class="price-new left">€{{ product.price }}</span>
-                            <a href="{% url 'buy_now_stripe' product.id %}" class="btn btn-sm btn-success right">Buy It Now  </a> </br>
-                            <a class="btn btn-sm btn-success pop-up-button right" title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-chevron-right"></span></a>
-        				</div>
+                            <span class="price-new left">€{{ product.price }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><a href="{% url 'buy_now_stripe' product.id %}" class="btn btn-sm btn-success">Buy It Now  </a> </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><a class="btn btn-sm btn-success pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}"  title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                        </div>
+                    </div>
         		</div>
         	</div>
         </div>
 
-        <div class="pop-up">
+        <!-- <div class="pop-up">
                 <span>x</span>
                 <div class="container-fluid">
                     <div class="row">
@@ -96,11 +139,8 @@
                     </div>
                 </div>
         </div>
-        <div class="pop-up-container"></div>
+        <div class="pop-up-container"></div> -->
 
     {% endfor %} 
    </div>
-
-
-
 {% endblock %}
