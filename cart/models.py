@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class CartItem(models.Model):
     user = models.ForeignKey(User)
     product = models.ForeignKey(Products)
-    quantity = models.IntegerField()
+    quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return "{0} ({1})".format(self.product.name, self.quantity)

@@ -253,26 +253,14 @@
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> NEWSLETTER </h4>
-                <p>Enter your email to sign up to daily newsletter for updates on surf conditions and special offers</p>
-                <input type="text" name="subscribe" placeholder="Enter your email">
-                <button>Submit</button>
+                <p>Sign up to receive daily newsletter with updates on surf conditions and special offers</p>
+                <a href="{% url 'register' %}" class="btn btn-xs btn-default">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> CONTACT US </h4>
-                <form method="POST" enctype="multipart/form-data">
-                    <input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken"/>
-                    <fieldset>
-                        <p><label for="name">Name</label>
-                        <input id="name" type="text" name="name"/></p>
-                        <p><label for="email">Email</label>
-                        <input id="email" type="text" name="email"/></p>
-                        <p><label for="enquiry">Enquiry</label>
-                        <input id="enquiry" type="text" name="enquiry"/></p>
-
-
-                        <input type="submit"/>
-                    </fieldset>
-                </form>
+                <h5> 123 Surf Street </br> Donegal </br> </h5>
+                <h5> Phone (+353)123456789 </h5>
+                <h5> Email admin@urbansurf.com </h5>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> FOLLOW US </h4>
@@ -282,6 +270,10 @@
                     <button class="fa fa-pinterest" href="#" target="_blank"></button> 
                 
             </div>
+
+
+
+            
         </div>
     </footer>
 

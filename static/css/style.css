@@ -288,6 +288,10 @@ hr.navbarline {
     height: 500px;
 } 
 
+.jumbocontentsmobile {
+    text-align: center;
+}
+
 
 #headerlogomobile {
     width: 80%;
@@ -521,14 +525,21 @@ hr.line1 {
   margin-right:12px;
 }
 
+.modal {
+    margin-right: 5%;
+    margin-left: 5%;
+}
 
-
+.size {
+    display: inline;
+    margin-right: 10%;
+}
 
 .pop-up {
   height:auto;
-  width:50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
   background:#fff;
   position:absolute;
   z-index:1;
@@ -636,6 +647,10 @@ hr.line1 {
 
 .footerinfo > h4, h5 {
     font-family: Oswald, sans-serif;   
+}
+
+.footerinfo > h5 {
+    color: #555555;
 }
 
 /* -----------------------------------------End Footer CSS -----------------------------------------*/
