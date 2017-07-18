@@ -47,7 +47,7 @@ class UserRegistrationForm(UserCreationForm):
 class SubscribeForm(forms.Form):
 
     MONTHLY_PLAN = [(i, i,) for i in range(1, 12)]
-    YEARLY_PLAN = [(i, i,) for i in range(2015, 2036)]
+    YEARLY_PLAN = [(i, i,) for i in range(2017, 2036)]
 
     credit_card_number = forms.CharField(label='Credit card number')
     cvv = forms.CharField(label='Security code (CVV)')

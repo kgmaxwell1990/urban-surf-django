@@ -26,12 +26,13 @@ from categories import urls as categories_urls
 from blog import urls as blog_urls
 from search import urls as search_urls
 from search.views import do_search
+from home.views import top3_post_list
 
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', get_index, name='index'),
+    url(r'^$', top3_post_list, name='index'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^user/', include(accounts_urls)),
     url(r'^blog/', include(blog_urls)),

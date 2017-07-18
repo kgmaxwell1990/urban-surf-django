@@ -65,6 +65,8 @@ def user_cart(request):
 def add_to_cart(request, id):
     product = get_object_or_404(Products, pk=id)
     quantity=int(request.POST.get('quantity'))
+    size = request.POST['size']
+    
 
     try:
         cartItem = CartItem.objects.get(user=request.user, product=product)
@@ -73,7 +75,8 @@ def add_to_cart(request, id):
         cartItem = CartItem(
             user=request.user,
             product=product,
-            quantity=quantity
+            quantity=quantity,
+            size=size
         )
 
     cartItem.save()
