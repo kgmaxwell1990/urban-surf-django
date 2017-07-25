@@ -31,11 +31,6 @@ ALLOWED_HOSTS = ['katie-dev-urban-surf.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1']
 
 
-DEFAULT_FROM_EMAIL = 'theblog@gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -147,6 +142,7 @@ DEFAULT_FROM_EMAIL = 'urbansurf@example.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DISQUS_WEBSITE_SHORTNAME =  os.environ.get("DISQUS_SHORTNAME")
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
