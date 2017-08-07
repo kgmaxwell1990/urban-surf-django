@@ -159,6 +159,7 @@ STRIPE_SECRET = os.environ.get('STRIPE_SECRET_KEY')
 
 
 # TO RUN LOCALLY HAVE THESE TWO UNCOMMENTED #
+
 # STATIC_URL = '/static/'
 # MEDIA_URL = '/media/'
 
