@@ -27,6 +27,7 @@ from blog import urls as blog_urls
 from search import urls as search_urls
 from search.views import do_search
 from home.views import top3_post_list
+from contact.views import contact
 
 
 
@@ -42,4 +43,5 @@ urlpatterns = [
     url(r'^cart/', include(cart_urls)),
     url(r'^search/', do_search, name='search'),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+    url(r'^contact/', contact, name='contact'),
 ]

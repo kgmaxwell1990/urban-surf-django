@@ -682,6 +682,29 @@ body > div > div.row > div > form {}
 
 /* ----------------------------------------- End Cart CSS ------------------------------------*/
 
+
+
+
+.contactform {
+    margin: 100px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #ECAE4B;
+    text-align: center;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+}
+
+.messages {
+    background-color: #ECAE4B;
+    color: black;
+    font-size: 20px;
+    font-family: Oswald, sans-serif;
+}
+
+
 /* -----------------------------------------Footer CSS -----------------------------------------*/
 
 #footer {
@@ -833,6 +856,8 @@ body > div > div.row > div > form {}
   -webkit-transform: scale(2);
   transform: scale(2);
 }
+
+
 
 
 
