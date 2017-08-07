@@ -30,6 +30,10 @@ p {
     text-align: center;
 }
 
+.green {
+    color: rgb(1, 180, 151);
+}
+
 .lobster {
     font-family: Lobster, cursive;
 }
@@ -45,6 +49,10 @@ p {
 .margin_20 {
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.background-transparent:hover {
+    background-color: transparent;
 }
 
 .container {
@@ -69,9 +77,18 @@ p {
     float: left;
 }
 
+.hover-black:hover {
+    color: black;
+}
+
+.hover-green:hover{
+    color: rgb(1, 180, 151);
+}
+
 .freedelivery {
-    background-color: rgba(34, 128, 163, 0.8);
+    background-color: rgb(1, 180, 151);
     margin: 0px;
+    color: black
 
 }
 
@@ -84,10 +101,14 @@ p {
     margin-top: 0px;
     padding-bottom: 2px;
     margin-bottom: 1px;
-    color: #f5f5f5;
+    color: black;
     font-size: 20px;
     font-weight: 100px;
     font-family: Oswald, sans-serif;
+}
+
+.freedelivery > h4 {
+    color: black;
 }
 
 
@@ -262,6 +283,20 @@ hr.navbarline {
     table-layout: fixed;
     font-size: 1.25em;
     list-style: none;
+}
+
+.dropdown-menu > li > a:hover {
+    color: black;
+    background-color: rgba(1, 180, 151, 0.6);
+    border: 1px solid;
+}
+
+.dropdown > a:hover {
+    color: rgb(1, 180, 151);
+}
+
+.green-hover:hover {
+    color: rgb(1, 180, 151);
 }
 
 /* -----------------------------------------End Navbar CSS ----------------------------------------- */
@@ -593,17 +628,17 @@ hr.line1 {
 } 
 
 .btn-success {
-    background-image: linear-gradient(rgba(34, 128, 163, 0.8), rgba(34, 128, 163, 0.8), rgba(34, 128, 163, 0.8));
+    background-image: linear-gradient(rgb(1, 180, 151), rgb(1, 180, 151), rgb(1, 180, 151));
     color: black;
-    border-color: rgba(34, 128, 163, 0.8);
+    border-color: rgb(1, 180, 151);
     border-radius: 25px;
     }
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active    {
-    background-color: #47a447;
+    background-color: rgb(1, 180, 151);
     color: #FFF;
-    border-color: #398439;
+    border-color: rgb(1, 180, 151);
     }
 
 
@@ -681,9 +716,123 @@ body > div > div.row > div > form {}
 
 /* -----------------------------------------End Footer CSS -----------------------------------------*/
 
+/* -----------------------------------------Hover.CSS -----------------------------------------*/
 
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
 
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Radial Out */
+.hvr-radial-out {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  background: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgb(1, 180, 151);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+ .hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+  color: white;
+  border: none;
+} 
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
 
 
 
@@ -792,6 +941,14 @@ nav {
 
 ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
   display: block;    
+}
+
+.dropdown > a {
+    margin: 0;
+}
+
+.dropdown-menu {
+    margin-top: 0px;
 }
 
 /* ---------------------------------------- End Navbar CSS --------------------------------------- */

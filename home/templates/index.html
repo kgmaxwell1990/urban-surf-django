@@ -13,7 +13,7 @@
             <hr class="line1">
             <div class="enteremail">
                 <h4> Sign up for daily updates on surf conditions and special offers </h4>
-                <a href="{% url 'register' %}" class="btn btn-lg btn-success">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                <a href="{% url 'register' %}" class="btn btn-lg btn-success hvr-grow">SIGN UP <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
         <div class="col-sm-6" id="magazine">
             <h4> 
                 <a href="{% if user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'login' %}{% endif %}" 
-                style="color:green">Subscribe </a> to monthly magazine
+                class="green">Subscribe </a> to monthly magazine
             </h4>
 
             <img src="{% static 'images/surfermagazine.jpg' %}" alt="magazine" width="60%"/>
@@ -84,26 +84,26 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6 cardclothes">
             <img src="{% static 'images/menswear.jpg' %}" width="300px"/>
-            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 1 %}'"> Shop Men </button>
+            <button type="submit" class="btn btn-lg buttoncard hvr-radial-out" onclick="location.href='{% url 'category' 1 %}'"> Shop Men </button>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 cardclothes">
             <img src="{% static 'images/womanswear.jpg' %}" width="300px"/>
-            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 2 %}'"> Shop Women </button>
+            <button type="submit" class="btn btn-lg buttoncard hvr-radial-out" onclick="location.href='{% url 'category' 2 %}'"> Shop Women </button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4 card">
             <img src="{% static 'images/surfgear.jpg' %}" width="300px"/>
-            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 3 %}'"> Shop Surf Gear </button>
+            <button type="submit" class="btn btn-lg buttoncard hvr-radial-out" onclick="location.href='{% url 'category' 3 %}'"> Shop Surf Gear </button>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 card">
             <img src="{% static 'images/accessories.jpg' %}" width="300px" />
-            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 5 %}'"> Shop Accessories </button>
+            <button type="submit" class="btn btn-lg buttoncard hvr-radial-out" onclick="location.href='{% url 'category' 5 %}'"> Shop Accessories </button>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 card">
             <img src="{% static 'images/footwear.jpg' %}"  width="300px"/>
-            <button type="submit" class="btn btn-lg buttoncard" onclick="location.href='{% url 'category' 4 %}'"> Shop Footwear </button>
+            <button type="submit" class="btn btn-lg buttoncard hvr-radial-out" onclick="location.href='{% url 'category' 4 %}'"> Shop Footwear </button>
         </div>
     </div>
 </div>
