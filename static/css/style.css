@@ -50,6 +50,10 @@ legend {
     text-align: center;
 }
 
+.align_left {
+    text-align: left;
+}
+
 .margin_20 {
     margin-left: 20%;
     margin-right: 20%;
@@ -79,9 +83,6 @@ legend {
     color: rgb(1, 180, 151);
 }
 
-.glyphicon-circle-arrow-right {
-    margin: 5px;
-}
 
 .pushdown {
     margin-top: 100px;
@@ -487,7 +488,7 @@ hr.line1 {
 }
 .col-item .options-cart-round a .fa {
   font-size:30px;
-  color: rgba(34, 128, 163, 0.9);
+  color: rgb(1, 180, 151);
 }
 .col-item .photo:hover .options-cart-round {
   display:block;
@@ -653,6 +654,12 @@ hr.line1 {
     padding: 20px;
     margin: 20px;
     display: inline-block;
+}
+
+.postcontent > p {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #newpostbutton {
@@ -1038,6 +1045,11 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 
 #blogpostinfodiv {
     display: inline;
+
+}
+
+#blogpostinfodiv > p {
+    text-align: left;
 }
 
 #blogpostimage {

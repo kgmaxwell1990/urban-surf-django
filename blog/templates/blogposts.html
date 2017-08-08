@@ -4,7 +4,7 @@
     {% if user.is_staff %}
     <div id="newpostbutton">
 
-    <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+    <button class="btn btn-success" onclick="location.href='{% url 'new_post' %}'">New Post</button>
     </div>
     {% endif %}
     
@@ -18,15 +18,11 @@
                 </a>
             </div>
             <div class="col-sm-8" id="blogpostinfodiv">
-                <a href="{{ post.id }}"><h3>{{ post.title }}</h3></a>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ post.content|truncatewords:30 }}</p>
-                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
-                        
-                        <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views}} | <strong>Tag</strong> {{ post.tag }}</p>
-                    </div>
-                </div>
+                <a href="{{ post.id }}"><h3 class="green green-hover oswald">{{ post.title }}</h3></a>
+                <p>{{ post.content|truncatewords:30 }}</p>
+                <p><button class="btn btn-success hvr-grow" onclick="location.href={{ post.id }}">Read More</button></p>
+                
+                <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views}} | <strong>Tag</strong> {{ post.tag }}</p>
             </div>
         </div>
     {% endfor %}

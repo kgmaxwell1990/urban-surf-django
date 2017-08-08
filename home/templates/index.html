@@ -65,14 +65,14 @@
 
         <a href="{% url 'blog' %}">
         <div class="col-sm-6" id="blog">
-                <h4><a href="{% url 'blog' %}" class="color_black"> Latest from the Blog </h4>
+                <h4><a href="{% url 'blog' %}" class="color_black green-hover hvr-grow"> Latest from the Blog<span class="glyphicon glyphicon-circle-arrow-right"> </a></h4>
         {% for post in posts %}
 
                 <hr class="line1">
-                    <h5> {{ post.title}}</h5>
+                    <h5 class="green "> {{ post.title}}</h5>
                 <hr class="line1">
                     <div class="bloginfo">
-                        <p class="color_black"> {{ post.content|truncatewords:15 }}</p>
+                        <p class="color_black"> {{ post.content|truncatewords:30 }}</p>
                     </div>
         {% endfor %}
             
