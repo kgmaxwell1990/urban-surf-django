@@ -37,7 +37,7 @@ def user_cart(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.success(request, "You have successfully paid")
+                messages.success(request, "You have successfully paid & will recieve your items within 5 working days!")
                 CartItem.objects.filter(user=request.user).delete()
                 return redirect(reverse('products'))
             else:

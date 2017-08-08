@@ -55,8 +55,9 @@
         <div class="col-sm-6" id="magazine">
             <h4> 
                 <a href="{% if user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'login' %}{% endif %}" 
-                class="green">Subscribe </a> to monthly magazine
+                class="green green-hover hvr-grow">Subscribe </a> to surfer magazine </br>
             </h4>
+            <h5 class="color_black oswald"> Only €7.29 per month </h5>
 
             <img src="{% static 'images/surfermagazine.jpg' %}" alt="magazine" width="60%"/>
             <!-- <p><button type="submit" class="btn btn-lg btn-success subscribebutton" onclick="location.href='{% url 'login' %}'"> Subscribe</button></p> -->

@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>You have no items in your cart.</div>
-    <div><a href="{% url 'products' %}">Go shop</a></div>
+<div class="container align_centre">
+    <div>
+        <h1>You have no items in your cart.</h1>
+    </div>
+    <div>
+        <a href="{% url 'products' %}" class="btn btn-lg btn-success hvr-grow">GO SHOP<span class="glyphicon glyphicon-circle-arrow-right"></a>
+    </div>
+</div>
 {% endblock %}

@@ -117,7 +117,7 @@
 
                             <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
                             {% for sub in subcategories %}
-                                <li><a href="{% url 'category' sub.id %}" class="hvr-grow background-transparent">{{ sub.name }}</a></li>                    
+                                <li><a href="{% url 'category' sub.id %}" class="hvr-grow">{{ sub.name }}</a></li>                    
                             {% endfor%}
                             </ul>
                             </li>
@@ -282,7 +282,7 @@
                 <h5> 123 Surf Street </br> Donegal </br> </h5>
                 <h5> Phone (+353)123456789 </h5>
                 <h5> Email admin@urbansurf.com </h5>
-                <h5> <a href="{% url 'contact' %}" class="green"> Contact Form </a></h5>
+                <h5> <a href="{% url 'contact' %}" class="green hover-black hvr-grow"> Contact Form </a></h5>
             </div>
             <div class="col-sm-3 footerinfo">
                 <h4> FOLLOW US </h4>

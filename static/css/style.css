@@ -1,8 +1,8 @@
 body {
-/*background-color: rgba(34, 128, 163, 0.6);*/
 background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
 }
 
+h1,
 h2,
 h4 {
     text-align: center;
@@ -30,6 +30,10 @@ p {
     text-align: center;
 }
 
+legend {
+    font-family: Oswald, sans-serif;
+}
+
 .green {
     color: rgb(1, 180, 151);
 }
@@ -49,16 +53,6 @@ p {
 .margin_20 {
     margin-left: 20%;
     margin-right: 20%;
-}
-
-.background-transparent:hover {
-    background-color: transparent;
-}
-
-.container {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
 }
 
 .color_red {
@@ -85,11 +79,44 @@ p {
     color: rgb(1, 180, 151);
 }
 
+.glyphicon-circle-arrow-right {
+    margin: 5px;
+}
+
+.pushdown {
+    margin-top: 100px;
+}
+
+.alert-success {
+    background-color: #ECAE4B;
+    text-align: center;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+}
+
+.messages {
+    background-color: #ECAE4B;
+    color: black;
+    font-size: 20px;
+    font-family: Oswald, sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
 .freedelivery {
     background-color: rgb(1, 180, 151);
     margin: 0px;
     color: black
+}
 
+.freedelivery > h4 {
+    color: black;
 }
 
 .freedeliverytext {
@@ -98,22 +125,13 @@ p {
 }
 
 .freedeliverytext > a {
-    margin-top: 0px;
+    margin-top: 3px;
     padding-bottom: 2px;
     margin-bottom: 1px;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100px;
     font-family: Oswald, sans-serif;
-}
-
-.freedelivery > h4 {
-    color: black;
-}
-
-
-.pushdown {
-    margin-top: 100px;
 }
 
 /* ------------------------------------------- Navbar CSS ----------------------------------------- */
@@ -304,21 +322,6 @@ hr.navbarline {
 
 /* -----------------------------------------Home CSS----------------------------------------- */
 
-/* #backgroundimg {
-    display: none;
-}
-
-#mobileimage {
-    display: inherit;
-    max-height: 400px;
-    width: 100%;
-    position: absolute;
-}  */
-
-/* #headerlogo {
-    width: 40%;
-    margin: 10% 30%;
-} */
 .jumbo {
     display: none;
 }
@@ -327,7 +330,6 @@ hr.navbarline {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: cover;
-    /* position: relative; */
     width: 100%;
     height: 500px;
 } 
@@ -359,8 +361,6 @@ hr.line1 {
     text-align: center;
     font-size: 20px;
 }
-
-
 
 .brandlogos {
     padding: 0;
@@ -434,9 +434,6 @@ hr.line1 {
 }
 
 /* ------------------------------------------End Home CSS -----------------------------------------*/
-
-
-
 
 /* -----------------------------------------Categories CSS -----------------------------------------*/
 
@@ -640,12 +637,15 @@ hr.line1 {
     color: #FFF;
     border-color: rgb(1, 180, 151);
     }
+.btn-danger {
+    border-radius: 50px;
+    color: black;
+    border: none;
+}
 
 
 
 /* -----------------------------------------End Categories CSS--------------------------------- */
-
-
 
 /* ----------------------------------------- Blog CSS -----------------------------------------*/
 #blogpostsmain {
@@ -660,7 +660,6 @@ hr.line1 {
     margin-right: 20px;
 }
 
-
 /*----------------------------------------- End Blog CSS -----------------------------------------*/
 
 
@@ -668,10 +667,6 @@ hr.line1 {
 .form-control {
     width: 100%;
 }
-
-body > div > div.row > div > form {}
-
-
 
 /* ----------------------------------------- End Account CSS ------------------------------------*/
 
@@ -682,26 +677,9 @@ body > div > div.row > div > form {}
 
 /* ----------------------------------------- End Cart CSS ------------------------------------*/
 
-
-
-
 .contactform {
-    margin: 100px;
     text-align: center;
-}
-
-.alert-success {
-    background-color: #ECAE4B;
-    text-align: center;
-    border-top: 2px dashed black;
-    border-bottom: 2px dashed black;
-}
-
-.messages {
-    background-color: #ECAE4B;
-    color: black;
-    font-size: 20px;
-    font-family: Oswald, sans-serif;
+    padding: 0px 40px 40px 40px;
 }
 
 
@@ -872,9 +850,10 @@ body > div > div.row > div > form {}
     margin-top: 240px;
 }
 
-.freedeliverytext {
-    padding-bottom: 2px;
+.freedeliverytext > a {
     font-size: 18px;
+    font-weight: 100px;
+    font-family: Oswald, sans-serif;
 }
 
 #bigscreenlogo {
@@ -916,10 +895,6 @@ body > div > div.row > div > form {}
 .navbar-nav > div > li {
     display: inline;
     margin: 10px;
-}
-
-nav {
-    /* padding-bottom: 30px; */
 }
 
 .topnav {
@@ -978,18 +953,7 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 
 /* ---------------------------------------- End Navbar CSS --------------------------------------- */
 
-
 /* ---------------------------------------- Home CSS ----------------------------------------- */
-
-
-/* #backgroundimg {
-    display: inherit;
-    width: 100%;
-    position: absolute;
-} */
-/* #mobileimage {
-    display: none;
-} */
 
 .jumbomobile {
     display: none;
@@ -998,7 +962,6 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
  .jumbo {
     display: inherit;
     background-repeat: no-repeat;
-    /* background-position: 0 0; */
     background-size: cover;
     background-position: cover;
     position: relative;
@@ -1061,7 +1024,6 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 
 /* ---------------------------------------- End Home CSS ----------------------------------------- */
 
-
 /* ---------------------------------------- Blog CSS ----------------------------------------- */
 
 #blogpostsmain {
@@ -1084,6 +1046,16 @@ ul.menubuttons li.dropdown:hover > ul.dropdown-menu {
 }
 
 /* ---------------------------------------- End Blog CSS ----------------------------------------- */
+
+.contactform {
+    padding: 0px 110px 110px 110px;
+}
+
+.contactdetails {
+    margin-top: 5%;
+}
+
+
 }
 
 
