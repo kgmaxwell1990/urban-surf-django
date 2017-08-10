@@ -28,10 +28,29 @@
 
     <hr>
 
-    {% csrf_token %}
-    {{ form|as_bootstrap }}
-    <div class="form-group">
-      <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <form role="form" method="POST" id="address-form">
+            <legend> Enter Your Address </legend>
+
+        </form>
     </div>
-    </form>
+        
+        
+    <div class="col-sm-12 col-md-6 col-lg-6">   
+        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}">
+            <div id="credit-card-errors" style="display:none">
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
+            </div>
+
+            <legend>Pay Now or <a href="{% url 'products' %}" class="green green-hover hvr-grow"> Add More To Your Basket!</a></legend>
+
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <div class="form-group">
+                <input class="btn btn-lg btn-success hvr-grow" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}

@@ -83,6 +83,10 @@ legend {
     color: rgb(1, 180, 151);
 }
 
+.whitebackground {
+    background-color: white;
+}
+
 
 .pushdown {
     margin-top: 100px;
