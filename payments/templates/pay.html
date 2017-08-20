@@ -12,33 +12,21 @@
 {% endblock %}
  
 {% block content %}
-    <form role="form" method="post" id="payment-form" action="{% url 'buy_now_stripe' product.id %}">
-    <div id="credit-card-errors" style="display:none">
-      <div class="alert-message block-message error" id="stripe-error-message"></div>
-    </div>
+<div class="container-fluid">
 
-    <legend>Buy It Now!</legend>
 
     <div>
-        <p><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></p>
+        <p><img width="20%" src="{{ MEDIA_URL }}{{ product.image }}"></p>
         <p>{{ product.name }}</p>
         <p>{{ product.description }}</p>
-        <p>{{ product.price }}</p>
+        <p>€{{ product.price }}</p>
     </div>
 
     <hr>
 
 <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-6">
-        <form role="form" method="POST" id="address-form">
-            <legend> Enter Your Address </legend>
-
-        </form>
-    </div>
-        
-        
-    <div class="col-sm-12 col-md-6 col-lg-6">   
-        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}">
+    <div class="col-sm-12">   
+        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}" class="align_centre margin_20">
             <div id="credit-card-errors" style="display:none">
                 <div class="alert-message block-message error" id="stripe-error-message"></div>
             </div>
@@ -52,5 +40,6 @@
             </div>
         </form>
     </div>
+</div>
 </div>
 {% endblock %}

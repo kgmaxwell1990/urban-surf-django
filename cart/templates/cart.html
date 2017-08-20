@@ -21,8 +21,8 @@
             <th>Image</th>
             <th>Name</th>
             <th>Size </th>
-            <th>Quantity</th>
             <th>Price</th>
+            <th>Quantity</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -32,12 +32,11 @@
                 <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
                 <td>{{ item.product.name }}</td>
                 <td>{{ item.size}}</td>
+                <td>€{{ item.product.price }}</td>
                 <td>{{ item.quantity }}</td>
-                <td>{{ item.product.price }}</td>
                 <td>
                     <form method="post" action="{% url 'adjust_cart' item.id %}">
                         {% csrf_token %}
-                        Quantity
                         <input name='quantity' type="number" min="0" max="999">
                         <button type="submit">Adjust</button>
                     </form>
@@ -48,9 +47,9 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
             <td>Basket Total</td>
-            <td>{{ total }}</td>
+            <td>€{{ total }}</td>
+            <td></td>
             <td></td>
         </tr>
         </tbody>
@@ -59,16 +58,9 @@
 
     <hr>
 <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-6">
-        <form role="form" method="POST" id="address-form">
-            <legend> Enter Your Address </legend>
-
-        </form>
-    </div>
         
-        
-    <div class="col-sm-12 col-md-6 col-lg-6">   
-        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}">
+    <div class="col-sm-12">   
+        <form role="form" method="POST" id="payment-form" action="{% url 'cart' %}" class="align_centre margin_20">
             <div id="credit-card-errors" style="display:none">
                 <div class="alert-message block-message error" id="stripe-error-message"></div>
             </div>

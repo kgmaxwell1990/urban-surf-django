@@ -15,24 +15,20 @@
 <div class="container-fluid">
     <div class="row" style="text-align:center">
         <div class="col-sm-12">
-            <h2> Hi {{ user.username }} You Have Successfully Logged In! </br>
-                You will recieve our daily newsletter with up-to-date surf conditions in Donegal </br>
-                to the email below</h2>
+            <h2> Hi {{ user.username }} You Have Successfully Logged In!</h2>
+            <h4 class="oswald green">You will recieve our daily newsletter with up-to-date surf conditions in Donegal </br>
+                to the email you registered with - {{ user.email}}</h4>
 
-            <p>The email address linked to this account is {{ user.email }} </p>
         </div>
     </div>
 <!--<p>Your stripe id is {{ user.profile.stripe_id }} </p>-->
     <div class="row" style="text-align:center">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             <h2 class="oswald">Subscription to Monthly Magazine</h2>
                     {% if user.profile.subscription_active %}
                         <p>You have '{{ user.profile.subscription_end|timeuntil }}' left on your subscription.</p>
                         <p>To cancel your subscription click 'Cancel Subscription' below</p>
                         <p>
-                            <a href="#"
-                            onclick=""
-                            class="btn btn-success">Change Subscription</a>
 
                             <a href="{% url "cancel_subscription" %}"
                             onclick="return cancelSubscriptionCheck();"
@@ -50,15 +46,6 @@
         </div>
 
 
-
-        <div class="col-sm-4">
-            <h2 class="oswald">Your Orders</h2>
-            
-        </div>
-
-        <div class="col-sm-4">
-            <h2 class="oswald">Your Address</h2>
-        </div>
     </div>
 
     

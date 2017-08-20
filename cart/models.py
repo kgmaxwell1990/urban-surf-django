@@ -4,7 +4,6 @@ from django.db import models
 from products.models import Products
 from django.contrib.auth.models import User
 
-# Create your models here.
 class CartItem(models.Model):
     user = models.ForeignKey(User)
     product = models.ForeignKey(Products)
