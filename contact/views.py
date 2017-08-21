@@ -26,7 +26,7 @@ def contact(request):
             content = template.render(context)
             
             subject = 'Thanks for getting in touch!'
-            message = 'Will get back to you asap'
+            message = 'Thank you for contacting Urban Surf. We will get back to you as soon as we can'
             from_email = settings.EMAIL_HOST_USER
             to_email = [contact_email]
 

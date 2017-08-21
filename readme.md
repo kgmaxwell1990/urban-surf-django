@@ -17,6 +17,7 @@ Follow this link to view deployed version of the web app https://katie-dev-urban
 ## URL's
 
 urls.py at the project level (urbanSurf) gives the url patterns routes to views, either directly:
+
  `from search.views import do_search`
 
  `urlpatterns = [url(r'^search/', do_search, name='search')]`
@@ -192,7 +193,7 @@ MEDIA_URL = '/media/'
 # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 ```
 
-7. Also in settings.py change the following(112-119):
+7. Also in settings.py change the following(lines 112-119):
 ```
 # DATABASES = {
 #     'default': {
