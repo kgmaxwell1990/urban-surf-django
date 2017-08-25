@@ -5,14 +5,15 @@ This Web App was built as a final project for the Code Institute's classroom boo
 
 ## Live Demo
 
-Follow this link to view deployed version of the web app https://katie-dev-urban-surf.herokuapp.com/ 
+**Follow this link to view deployed version of the web app https://katie-dev-urban-surf.herokuapp.com/**
 
 ## Built with 
 1. Django framework
 2. Python
 2. HTML
 3. CSS
-4. Javascript
+4. Bootstrap
+5. SQLite database
 
 ## URL's
 
@@ -75,7 +76,7 @@ The Cart App stores the size, quantity and price of all products selected and di
 
 #### Contact
 
-The Contact App is used when the 'Contact Us' link is clicked. The anchor link's href attribute points to the URL 'contact'. From the top level urls.py the 'contact' function is called from the views.py in the Contacts App. This renders the contact.html page which displays the form which has been defined in forms.py within the Contact App. Once the user fills the form in, the 'contact' function is called which checks if the form is valid. If the form is valid, an automatic email is sent to the user acknowledging reciept of the enquiry and a copy of the enquiry is emailed to the website owner. 
+The Contact App is used when the 'Contact Us' link is clicked. The anchor link's href attribute points to the URL 'contact'. From the top level urls.py the 'contact' function is called from the views.py in the Contacts App. This renders the contact.html page which displays the form which has been defined in forms.py within the Contact App. Once the user fills the form in, the 'contact' function is called which checks if the form is valid. If the form is valid, an automatic email is sent to the user acknowledging reciept of the enquiry and a copy of the enquiry is emailed to the website owner - the user is re-directed back to index.html and a styled Django message appears at the top acknowledging receipt.
 
 #### Blog
 
@@ -84,9 +85,9 @@ django-disqus must be pip-installed to manage comments on blogposts as well as P
 
 The home page also updates automatically when a new post is added - showing only the 3 newest posts.
 
-## Hosting
+## Deployment / Hosting
 
-This App is hosted on Heroku with automatic deploys from GitHub
+This Project was deployed and is hosted on Heroku with automatic deploys from GitHub
 
 ## Databases / Static Files
 
@@ -100,7 +101,7 @@ Follow the below instructions to clone this project for Mac (commands will be sl
 
 1. Go to folder you want to put the cloned project in your terminal & type:
     `$ git clone https://github.com/kgmaxwell1990/urban-surf.git`
-2. Create & Activate a new Virtual Environment:
+2. Create & Activate a new Virtual Environment in terminal:
     Create: `$ python3 -m venv ~/virtualenvs/name_of_environment`
     Activate: `$ source ~/virtualenvs/name_of_environment/bin/activate`
 3. Install the project dependancies:
