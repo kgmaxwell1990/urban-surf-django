@@ -14,8 +14,9 @@
                 <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
                 </div>
                 <button class="btn btn-success" onclick="location.href='/blog'"><span class="glyphicon glyphicon-circle-arrow-left"></span>Back To Blog</button>
+                {% if user.is_authenticated %}
                 <button class="btn btn-danger" onclick="location.href='edit'">Edit</button>
-        
+                {% endif %}
                    
             </div>
         </div>
