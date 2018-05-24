@@ -85,6 +85,7 @@ legend {
 
 .whitebackground {
     background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 
@@ -265,7 +266,6 @@ nav {
 .navbar-container {
     width: 100%;
 }
-
 .navbar-fixed {
     position: fixed;
     display: inline-block;
@@ -537,7 +537,6 @@ hr.line1 {
 /* -----------------------------------------Categories CSS -----------------------------------------*/
 
 .col-item {
-  border: 1px solid #E1E1E1;
   background: #FFF;
   margin-bottom:12px;
 }
@@ -750,6 +749,7 @@ hr.line1 {
     padding: 20px;
     margin: 20px;
     display: inline-block;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .postcontent > p {
@@ -761,6 +761,10 @@ hr.line1 {
 #newpostbutton {
     float: right;
     margin-right: 20px;
+}
+
+.post_detail img{
+    width: 100%;
 }
 
 /*----------------------------------------- End Blog CSS -----------------------------------------*/
